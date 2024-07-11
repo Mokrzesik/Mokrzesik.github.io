@@ -5,12 +5,14 @@ body {
 
 #chart-container {
   margin-top: 20px;
+  left: 100px;
 }
 
 rect {
-  transition: fill 0.3s ease;
+  transition: fill 4.0s ease;
 }
 
 rect:hover {
   fill: navy;
 }
+

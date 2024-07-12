@@ -1,4 +1,4 @@
-const data = d3.csv("cars2017.csv");
+const data = d3.csv("Mokrzesik.github.io/js/cars2017.csv");
 const svg = d3.select("svg").append("g").attr("transform", "translate(50,50)");
 
 const xScale = d3.scaleLog().domain([10,150]).range([0,200]);

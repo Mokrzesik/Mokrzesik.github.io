@@ -1,3 +1,5 @@
+let data;
+
 async function loadCSV() {
     try {
       const response = await fetch('https://flunky.github.io/cars2017.csv');
@@ -12,7 +14,7 @@ async function loadCSV() {
         skipEmptyLines: true
       });
   
-      const data = parsedData.data; // This is your constant with the loaded data
+      data = parsedData.data; // This is your constant with the loaded data
       console.log(data); // You can use or manipulate the data as needed
     } catch (error) {
       console.error('There was a problem with the fetch operation:', error);

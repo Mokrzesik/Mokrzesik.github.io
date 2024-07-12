@@ -1,4 +1,4 @@
-const data = await d3.csv("https://flunky.github.io/cars2017.csv");
+const data = await d3.csv("cars2017.csv");
 const svg = d3.select("svg").append("g").attr("transform", "translate(50,50)");
 
 const xScale = d3.scaleLog().domain([10,150]).range([0,200]);

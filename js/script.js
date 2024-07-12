@@ -14,7 +14,7 @@ async function loadCSV() {
   
       const data = parsedData.data; // This is your constant with the loaded data
 
-      createVisualization(data); // 
+      createVisualization(data); // Call the 
     } catch (error) {
       console.error('There was a problem with the fetch operation:', error);
     }
@@ -45,9 +45,10 @@ function createVisualization(data) {
 
     d3.select("svg").append("g").attr("transform", "translate(50,50)").call(yAxis);
     d3.select("svg").append("g").attr("transform", "translate(50,250)").call(xAxis);
+    console.log("Got to the end of the visualization function")
 }
   
-// Call the function to load the data
+// Call the function to load the data and create visualization
 loadCSV();
 
-//test0.0.9
+//test0.0.10

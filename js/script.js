@@ -29,15 +29,24 @@ async function loadCSV() {
       let gen1_sp_defense = 0;
       let gen1_speed = 0;
       const total_gen1_pokemon = gen1.length;
+      console.log(total_gen1_pokemon);
 
       for (let i = 0; i < total_gen1_pokemon; i++) {
         gen1_attack += gen1[i].attack;
+        console.log(gen1[i].attack);
         gen1_hp += gen1[i].hp;
         gen1_defense += gen1[i].defense;
         gen1_sp_attack += gen1[i].sp_attack;
         gen1_sp_defense += gen1[i].sp_defesnse;
         gen1_sp_speed += gen1[i].speed;
       }
+      console.log(gen1_attack);
+      console.log(gen1_hp);
+      console.log(gen1_defense);
+      console.log(gen1_sp_attack);
+      console.log(gen1_sp_defense);
+      console.log(gen1_speed);
+
       gen1_attack = gen1_attack / total_gen1_pokemon;
       gen1_hp = gen1_hp / total_gen1_pokemon;
       gen1_defense = gen1_defense / total_gen1_pokemon;

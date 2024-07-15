@@ -1,6 +1,7 @@
 async function loadCSV() {
     try {
-      const response = await fetch('https://www.kaggle.com/datasets/cristobalmitchell/pokedex?select=pokemon.csv');
+      const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+      const response = await fetch(proxyUrl + 'https://www.kaggle.com/datasets/cristobalmitchell/pokedex?select=pokemon.csv');
       if (!response.ok) {
         throw new Error('Network response was not ok ' + response.statusText);
       }

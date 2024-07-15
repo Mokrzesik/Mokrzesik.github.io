@@ -1,6 +1,6 @@
 async function loadCSV() {
     try {
-      const response = await fetch('https://flunky.github.io/cars2017.csv');
+      const response = await fetch('https://www.kaggle.com/datasets/lashagoch/life-expectancy-who-updated/download');
       if (!response.ok) {
         throw new Error('Network response was not ok ' + response.statusText);
       }
@@ -31,13 +31,13 @@ function createVisualization(data) {
         .enter()
         .append("circle")
         .attr("cx", function(d) {
-        return (xScale(parseInt(d.AverageCityMPG)))
+        return (xScale(parseInt(d.Hepatitis_B)))
         })
         .attr("cy", function(d) {
-        return (yScale(parseInt(d.AverageHighwayMPG)))
+        return (yScale(parseInt(d.Infant_deaths)))
         })
         .attr("r", function(d) {
-        return (2 + parseInt(d.EngineCylinders))
+        return (2 + 2)
         });
 
     var xAxis = d3.axisBottom(xScale).tickValues([10,20,50,100]).tickFormat(d3.format("~s"));

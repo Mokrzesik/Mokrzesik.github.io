@@ -3,15 +3,3 @@ body {
   text-align: center;
 }
 
-#chart-container {
-  margin-top: 20px;
-}
-
-rect {
-  transition: fill 4.0s ease;
-}
-
-rect:hover {
-  fill: navy;
-}
-

@@ -13,7 +13,7 @@ async function loadCSV() {
       });
   
       const data = parsedData.data; // This is your constant with the loaded data
-      console.log(data[0])
+      console.log(data[0]);
 
       createVisualization(data); // Call the 
     } catch (error) {

@@ -1,6 +1,6 @@
 async function loadCSV() {
     try {
-      const response = await fetch('https://gist.githubusercontent.com/aishwarya8615/89d9f36fc014dea62487f7347864d16a/raw/8629d284e13976dcb13bb0b27043224b9266fffa/Life_Expectancy_Data.csv');
+      const response = await fetch('https://www.kaggle.com/datasets/cristobalmitchell/pokedex?select=pokemon.csv');
       if (!response.ok) {
         throw new Error('Network response was not ok ' + response.statusText);
       }
@@ -13,6 +13,7 @@ async function loadCSV() {
       });
   
       const data = parsedData.data; // This is your constant with the loaded data
+      console.log(data[0])
 
       createVisualization(data); // Call the 
     } catch (error) {

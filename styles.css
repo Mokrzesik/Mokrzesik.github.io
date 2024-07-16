@@ -98,6 +98,296 @@ body {
   font-size: 12px;;
 }
 
+#ThirdGraph{
+  transition: transform 1.0s ease;
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+}
+#Gen3{
+  margin-top: 65px;
+}
+#Gen3 rect{
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : blue;
+}
+#Gen3_statTotal{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Gen3_Title{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#Gen3 text{
+  display: flex;
+  color: black;
+  font-size: 12px;;
+}
+
+#FourthGraph{
+  transition: transform 1.0s ease;
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+}
+#Gen4{
+  margin-top: 65px;
+}
+#Gen4 rect{
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : blue;
+}
+#Gen4_statTotal{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Gen4_Title{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#Gen4 text{
+  display: flex;
+  color: black;
+  font-size: 12px;;
+}
+
+#FifthGraph{
+  transition: transform 1.0s ease;
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+}
+#Gen5{
+  margin-top: 65px;
+}
+#Gen5 rect{
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : blue;
+}
+#Gen5_statTotal{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Gen5_Title{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#Gen5 text{
+  display: flex;
+  color: black;
+  font-size: 12px;;
+}
+
+#SixthGraph{
+  transition: transform 1.0s ease;
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+}
+#Gen6{
+  margin-top: 65px;
+}
+#Gen6 rect{
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : blue;
+}
+#Gen6_statTotal{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Gen6_Title{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#Gen6 text{
+  display: flex;
+  color: black;
+  font-size: 12px;;
+}
+
+#SeventhGraph{
+  transition: transform 1.0s ease;
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+}
+#Gen7{
+  margin-top: 65px;
+}
+#Gen7 rect{
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : blue;
+}
+#Gen7_statTotal{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Gen7_Title{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#Gen7 text{
+  display: flex;
+  color: black;
+  font-size: 12px;;
+}
+
+#EigthGraph{
+  transition: transform 1.0s ease;
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+}
+#Gen8{
+  margin-top: 65px;
+}
+#Gen8 rect{
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : blue;
+}
+#Gen8_statTotal{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Gen8_Title{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#Gen8 text{
+  display: flex;
+  color: black;
+  font-size: 12px;;
+}
+
+#SecondGraph{
+  transition: transform 1.0s ease;
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+}
+
 
 #Gen1Button{
   position: absolute;
@@ -160,6 +450,116 @@ body {
   background-color: grey;
 }
 #Gen3Button:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#Gen4Button {
+  position: absolute;
+  top: 400px;
+  right: 300px;
+  width: 80px;
+  height: 50px;
+  border: 2px solid black;
+  display: none;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#Gen4Button:hover {
+  background-color: grey;
+}
+#Gen4Button:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#Gen5Button {
+  position: absolute;
+  top: 400px;
+  right: 300px;
+  width: 80px;
+  height: 50px;
+  border: 2px solid black;
+  display: none;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#Gen5Button:hover {
+  background-color: grey;
+}
+#Gen5Button:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#Gen6Button {
+  position: absolute;
+  top: 400px;
+  right: 300px;
+  width: 80px;
+  height: 50px;
+  border: 2px solid black;
+  display: none;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#Gen6Button:hover {
+  background-color: grey;
+}
+#Gen6Button:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#Gen7Button {
+  position: absolute;
+  top: 400px;
+  right: 300px;
+  width: 80px;
+  height: 50px;
+  border: 2px solid black;
+  display: none;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#Gen7Button:hover {
+  background-color: grey;
+}
+#Gen7Button:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#Gen8Button {
+  position: absolute;
+  top: 400px;
+  right: 300px;
+  width: 80px;
+  height: 50px;
+  border: 2px solid black;
+  display: none;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#Gen8Button:hover {
+  background-color: grey;
+}
+#Gen8Button:active {
   background-color: darkgrey;
   box-shadow: 0 2px darkgrey;
   transform: translateY(4px);

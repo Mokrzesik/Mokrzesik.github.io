@@ -144,31 +144,74 @@ function setStatTotal(avg, boxID) {
   numberBox.textContent = `Total Stats: ${avg}`;
 }
 
-function shrinkAndMove(graph, button, stat, title, newButton) {
-  container = document.getElementById(graph);
-  container.style.transform = 'translate(-450px, -160px)';
-
-  // setup for next graph
-  button = document.getElementById(button);
-  button.style.display = 'none';
-
-  stat = document.getElementById(stat);
-  stat.style.display = "none";
-
-  title = document.getElementById(title);
-  title.style.display = "none";
-
-  next_button = document.getElementById(newButton);
-  next_button.style.display = "flex";
-
+function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
+  actuallyShrinkAndMove(graphID, buttonID, statID, titleID, newButtonID);
   if (current_generation == 2) {
-    current_generation++;
     createVisualization(gen2_numbers, '#Gen2');
     setStatTotal(gen2_avg, 'Gen2_statTotal');
     next_graph = document.getElementById('SecondGraph');
     next_graph.style.display = 'flex';
+    current_generation++;
+  } else if (current_generation == 3) {
+    createVisualization(gen3_numbers, '#Gen3');
+    setStatTotal(gen3_avg, 'Gen3_statTotal');
+    next_graph = document.getElementById('ThirdGraph');
+    current_generation++;
+    next_graph.style.display = 'flex';
+  } else if (current_generation == 4) {
+    current_generation++;
+    createVisualization(gen4_numbers, '#Gen4');
+    setStatTotal(gen4_avg, 'Gen4_statTotal');
+    next_graph = document.getElementById('FourthGraph');
+    next_graph.style.display = 'flex';
+  } else if (current_generation == 5) {
+    current_generation++;
+    createVisualization(gen5_numbers, '#Gen5');
+    setStatTotal(gen5_avg, 'Gen5_statTotal');
+    next_graph = document.getElementById('FifthGraph');
+    next_graph.style.display = 'flex';
+  } else if (current_generation == 6) {
+    current_generation++;
+    createVisualization(gen6_numbers, '#Gen6');
+    setStatTotal(gen6_avg, 'Gen6_statTotal');
+    next_graph = document.getElementById('SixthGraph');
+    next_graph.style.display = 'flex';
+  } else if (current_generation == 7) {
+    current_generation++;
+    createVisualization(gen7_numbers, '#Gen7');
+    setStatTotal(gen7_avg, 'Gen7_statTotal');
+    next_graph = document.getElementById('SeventhGraph');
+    next_graph.style.display = 'flex';
+  } else if (current_generation == 8) {
+    current_generation++;
+    createVisualization(gen8_numbers, '#Gen8');
+    setStatTotal(gen8_avg, 'Gen8_statTotal');
+    next_graph = document.getElementById('EigthGraph');
+    next_graph.style.display = 'flex';
   }
 
+}
+
+function actuallyShrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
+  // move graph
+  container = document.getElementById(graphID);
+  container.style.transform = 'translate(-450px, -160px)';
+
+  // remove button
+  button = document.getElementById(buttonID);
+  button.style.display = 'none';
+
+  // remove stat
+  stat = document.getElementById(statID);
+  stat.style.display = "none";
+
+  // remove title
+  title = document.getElementById(titleID);
+  title.style.display = "none";
+
+  // display next button
+  next_button = document.getElementById(newButtonID);
+  next_button.style.display = "flex";
 }
 
 loadCSV();

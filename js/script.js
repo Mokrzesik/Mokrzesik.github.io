@@ -34,7 +34,7 @@ async function loadCSV() {
       let [gen6_attackAvg, gen6_hpAvg, gen6_defenseAvg, gen6_sp_attackAvg, gen6_sp_defenseAvg, gen6_speedAvg, gen6_avg] = extractGenData(gen6);
       let [gen7_attackAvg, gen7_hpAvg, gen7_defenseAvg, gen7_sp_attackAvg, gen7_sp_defenseAvg, gen7_speedAvg, gen7_avg] = extractGenData(gen7);
       let [gen8_attackAvg, gen8_hpAvg, gen8_defenseAvg, gen8_sp_attackAvg, gen8_sp_defenseAvg, gen8_speedAvg, gen8_avg] = extractGenData(gen8);
-/*
+
       console.log(gen1_attackAvg);
       console.log(gen2_attackAvg);
       console.log(gen3_attackAvg);
@@ -109,43 +109,42 @@ async function loadCSV() {
       console.log(gen6_avg);
       console.log(gen7_avg);
       console.log(gen8_avg);
-*/
 
-      createVisualization([gen1_attackAvg, gen1_hpAvg, gen1_defenseAvg, gen1_sp_attackAvg, gen1_sp_defenseAvg, gen1_speedAvg, gen1_avg]); // Call the graph making
+
+      createVisualization([gen1_attackAvg, gen1_hpAvg, gen1_defenseAvg, gen1_sp_attackAvg, gen1_sp_defenseAvg, gen1_speedAvg]); // Call the graph making
     } catch (error) {
       console.error('There was a problem with the fetch operation:', error);
     }
   }
 
 function createVisualization(gen) {
-
-  const attributes = ["attack", "hp", "defense", "sp_attack", "sp_defense", "speed"];
-  const width = 400;
+  const attributes = ['attack', 'hp', 'defense', 'sp_attack', 'sp_defense', 'speed']
   const height = 400;
+  const width = 400;
+  const margin = 20;
+  const yScale = d3.scaleLinear().domain([60,90]).range([height, 0]);
+  const xScale = d3.scaleBand().domain(attributes).range([0, width]);
 
-  const averages = attributes.map((attribute, index) => ({
-    attr: attribute,
-    value: gen[index]
-}));
-
-  const svg = d3.select('#Gen1');
-
-  const xScale = d3.scaleBand()
-    .domain(attributes)
-    .range([0,width]);
-
-  const yScale = d3.scaleLinear()
-  .domain([0, 100])
-  .range([height, 0]);
-
-  svg.selectAll('rect')
-    .data(averages)
+  d3.select('#Gen1')
+    .selectAll('rect')
+    .data(gen)
     .enter()
     .append('rect')
-    .attr('x', d => xScale(d.category))
-    .attr('width', xScale.bandwidth())
-    .attr('y', d => yScale(d.value))
-    .attr('height', d => height - yScale(d.value));
+    .attr('width', 40)
+    .attr('height', function(d) {return height - yScale(d);})
+    .attr('x', function(d,i){return 68 * i;})
+    .attr('y', function(d) {return yScale(d);})
+    .attr('transform', "translate(30,20)");
+
+  d3.select('#Gen1')
+    .append('g')
+    .attr('transform', "translate("+margin+","+margin+")")
+    .call(d3.axisLeft(yScale));
+
+  d3.select('#Gen1')
+    .append('g')
+    .attr('transform', "translate("+margin+","+(height+margin)+")")
+    .call(d3.axisBottom(xScale));
 
 }
 

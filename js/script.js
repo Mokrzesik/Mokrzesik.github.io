@@ -130,11 +130,11 @@ function createVisualization(gen) {
     .data(gen)
     .enter()
     .append('rect')
-    .attr('width', 40)
+    .attr('width', 60)
     .attr('height', function(d) {return height - yScale(d);})
     .attr('x', function(d,i){return 68 * i;})
     .attr('y', function(d) {return yScale(d);})
-    .attr('transform', "translate(30,20)");
+    .attr('transform', "translate(20,20)");
 
   d3.select('#Gen1')
     .append('g')

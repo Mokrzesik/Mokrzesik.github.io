@@ -4,25 +4,26 @@ body {
   background-color: #f5f5dc;
 }
 
-#FirstGraph {
+#FirstGraph{
   transition: transform 1.0s ease;
+  display: flex;
+  position: absolute;
+  top: 115px;
+  right: 470px;
 }
-
-#Gen1 {
+#Gen1{
   margin-top: 65px;
 }
-
-#Gen1 rect {
+#Gen1 rect{
   display: flex;
   justify-content: center; /* Horizontally centers the content */
   align-items: center; /* Vertically centers the content */
   fill : blue;
 }
-
-#Gen1_statTotal {
+#Gen1_statTotal{
   position: absolute;
-  top: 250px;
-  right: 650px;
+  top: 75px;
+  right: 175px;
   width: 150px;
   height: 50px;
   border: 2px solid black;
@@ -32,10 +33,9 @@ body {
   font-size: 20px;
   margin-bottom: 10px;
 }
-
-#Gen1_Title {
+#Gen1_Title{
   position: absolute;
-  top: 75px;
+  top: -20px;
   left: 50%;
   transform: translateX(-50%);
   width: 250px;
@@ -45,8 +45,61 @@ body {
   justify-content: center;
   font-size: 40px;
 }
+#Gen1 text{
+  display: flex;
+  color: black;
+  font-size: 12px;;
+}
 
-#nextGenButton {
+#SecondGraph{
+  transition: transform 1.0s ease;
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+}
+#Gen2{
+  margin-top: 65px;
+}
+#Gen2 rect{
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : blue;
+}
+#Gen2_statTotal{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Gen2_Title{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#Gen2 text{
+  display: flex;
+  color: black;
+  font-size: 12px;;
+}
+
+
+#Gen1Button{
   position: absolute;
   top: 400px;
   right: 300px;
@@ -59,10 +112,54 @@ body {
   justify-content: center;
   box-shadow: 0 4px black; 
 }
-#nextGenButton:hover {
+#Gen1Button:hover{
   background-color: grey;
 }
-#nextGenButton:active {
+#Gen1Button:active{
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#Gen2Button {
+  position: absolute;
+  top: 400px;
+  right: 300px;
+  width: 80px;
+  height: 50px;
+  border: 2px solid black;
+  display: none;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#Gen2Button:hover {
+  background-color: grey;
+}
+#Gen2Button:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#Gen3Button {
+  position: absolute;
+  top: 400px;
+  right: 300px;
+  width: 80px;
+  height: 50px;
+  border: 2px solid black;
+  display: none;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#Gen3Button:hover {
+  background-color: grey;
+}
+#Gen3Button:active {
   background-color: darkgrey;
   box-shadow: 0 2px darkgrey;
   transform: translateY(4px);

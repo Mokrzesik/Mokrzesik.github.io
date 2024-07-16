@@ -1,54 +1,71 @@
+// Call the function to load the data and create visualization
+let current_generation = 2;
+let gen2_numbers = null;
+let gen3_numbers = null;
+let gen4_numbers = null;
+let gen5_numbers = null;
+let gen6_numbers = null;
+let gen7_numbers = null;
+let gen8_numbers = null;
+let gen2_avg = null;
+let gen3_avg = null;
+let gen4_avg = null;
+let gen5_avg = null;
+let gen6_avg = null;
+let gen7_avg = null;
+let gen8_avg = null;
+
+
+
 async function loadCSV() {
-    try {
-      const response = await fetch('/pokemon.csv');
-      if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
-      }
-      let csvText = await response.text();
-      // Remove null characters
-      csvText = csvText.replace(/\u0000/g, '');
-      
-      // Now, you can parse the CSV data as needed
-      const parsedData = Papa.parse(csvText, {
-        header: true, // Use headers as keys
-        skipEmptyLines: true,
-        transformHeader: header => header.trim().toLowerCase()
-      });
-  
-      const data = parsedData.data; // This is your constant with the loaded data
-
-      const gen1 = data.filter(item => item.gen === 'I');
-      const gen2 = data.filter(item => item.gen === 'II');
-      const gen3 = data.filter(item => item.gen === 'III');
-      const gen4 = data.filter(item => item.gen === 'IV');
-      const gen5 = data.filter(item => item.gen === 'V');
-      const gen6 = data.filter(item => item.gen === 'VI');
-      const gen7 = data.filter(item => item.gen === 'VII');
-      const gen8 = data.filter(item => item.gen === 'VIII');
-
-      const [gen1_numbers, gen1_avg] = extractGenData(gen1);
-      const [gen2_numbers, gen2_avg] = extractGenData(gen2);
-      const [gen3_numbers, gen3_avg] = extractGenData(gen3);
-      const [gen4_numbers, gen4_avg] = extractGenData(gen4);
-      const [gen5_numbers, gen5_avg] = extractGenData(gen5);
-      const [gen6_numbers, gen6_avg] = extractGenData(gen6);
-      const [gen7_numbers, gen7_avg] = extractGenData(gen7);
-      const [gen8_numbers, gen8_avg] = extractGenData(gen8);
-
-      createVisualization(gen1_numbers, '#Gen1'); // Call the graph making
-      setStatTotal(gen1_avg, 'Gen1_statTotal');
-    } catch (error) {
-      console.error('There was a problem with the fetch operation:', error);
+  try {
+    const response = await fetch('/pokemon.csv');
+    if (!response.ok) {
+      throw new Error('Network response was not ok ' + response.statusText);
     }
+    let csvText = await response.text();
+    // Remove null characters
+    csvText = csvText.replace(/\u0000/g, '');
+    
+    // Now, you can parse the CSV data as needed
+    const parsedData = Papa.parse(csvText, {
+      header: true, // Use headers as keys
+      skipEmptyLines: true,
+      transformHeader: header => header.trim().toLowerCase()
+    });
 
-    return [gen2_numbers, gen3_numbers, gen4_numbers, gen5_numbers, gen6_numbers, gen7_numbers, gen8_numbers, gen2_avg, gen3_avg, gen4_avg, gen5_avg, gen6_avg, gen7_avg, gen8_avg];
+    const data = parsedData.data; // This is your constant with the loaded data
+
+    const gen1 = data.filter(item => item.gen === 'I');
+    const gen2 = data.filter(item => item.gen === 'II');
+    const gen3 = data.filter(item => item.gen === 'III');
+    const gen4 = data.filter(item => item.gen === 'IV');
+    const gen5 = data.filter(item => item.gen === 'V');
+    const gen6 = data.filter(item => item.gen === 'VI');
+    const gen7 = data.filter(item => item.gen === 'VII');
+    const gen8 = data.filter(item => item.gen === 'VIII');
+
+    [gen1_numbers, gen1_avg] = extractGenData(gen1);
+    [gen2_numbers, gen2_avg] = extractGenData(gen2);
+    [gen3_numbers, gen3_avg] = extractGenData(gen3);
+    [gen4_numbers, gen4_avg] = extractGenData(gen4);
+    [gen5_numbers, gen5_avg] = extractGenData(gen5);
+    [gen6_numbers, gen6_avg] = extractGenData(gen6);
+    [gen7_numbers, gen7_avg] = extractGenData(gen7);
+    [gen8_numbers, gen8_avg] = extractGenData(gen8);
+
+    createVisualization(gen1_numbers, '#Gen1'); // Call the graph making
+    setStatTotal(gen1_avg, 'Gen1_statTotal');
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
   }
+}
 
 function createVisualization(gen, graphID) {
   const attributes = ['attack', 'hp', 'defense', 'sp_attack', 'sp_defense', 'speed']
   const height = 400;
   const width = 400;
-  const margin = 20;
+  const margin = 25;
   const yScale = d3.scaleLinear().domain([60,90]).range([height, 0]);
   const xScale = d3.scaleBand().domain(attributes).range([0, width]);
 
@@ -59,8 +76,8 @@ function createVisualization(gen, graphID) {
     .append('rect')
     .attr('width', 60)
     .attr('height', function(d) {return height - yScale(d);})
-    .attr('x', function(d,i){return 68 * i;})
-    .attr('y', function(d) {return yScale(d);})
+    .attr('x', function(d,i){return 68 * i + 5;})
+    .attr('y', function(d) {return yScale(d) + 5;})
     .attr('transform', "translate(20,20)");
 
   d3.select(graphID)
@@ -72,6 +89,16 @@ function createVisualization(gen, graphID) {
     .append('g')
     .attr('transform', "translate("+margin+","+(height+margin)+")")
     .call(d3.axisBottom(xScale));
+
+  d3.select(graphID)
+    .selectAll('.bar-text')
+    .data(gen)
+    .enter().append('text')
+    .attr("class", "bar-text")
+    .attr("text-anchor", "middle")
+    .attr("x", function(d, i) { return 68 * i + 50; })
+    .attr("y", function(d) { return yScale(d) + 15; })
+    .text(function(d) { return d; });
 
 }
 
@@ -117,23 +144,31 @@ function setStatTotal(avg, boxID) {
   numberBox.textContent = `Total Stats: ${avg}`;
 }
 
-function shrinkAndMove() {
-  container = document.getElementById('FirstGraph');
+function shrinkAndMove(graph, button, stat, title, newButton) {
+  container = document.getElementById(graph);
   container.style.transform = 'translate(-450px, -160px)';
 
   // setup for next graph
-  button = document.getElementById('nextGenButton');
-  button.textContent = 'Gen 3';
+  button = document.getElementById(button);
+  button.style.display = 'none';
 
-  stat = document.getElementById('Gen1_statTotal');
+  stat = document.getElementById(stat);
   stat.style.display = "none";
 
-  title = document.getElementById('Gen1_Title');
+  title = document.getElementById(title);
   title.style.display = "none";
+
+  next_button = document.getElementById(newButton);
+  next_button.style.display = "flex";
+
+  if (current_generation == 2) {
+    current_generation++;
+    createVisualization(gen2_numbers, '#Gen2');
+    setStatTotal(gen2_avg, 'Gen2_statTotal');
+    next_graph = document.getElementById('SecondGraph');
+    next_graph.style.display = 'flex';
+  }
 
 }
 
-// Call the function to load the data and create visualization
-[gen2_numbers, gen3_numbers, gen4_numbers, gen5_numbers, gen6_numbers, gen7_numbers, gen8_numbers, gen2_avg, gen3_avg, gen4_avg, gen5_avg, gen6_avg, gen7_avg, gen8_avg] = loadCSV();
-
-
+loadCSV();

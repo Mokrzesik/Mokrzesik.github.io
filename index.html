@@ -8,11 +8,20 @@
 </head>
 <body>
     <h1>Are Pokemon Really Getting Stronger?</h1>
-    <p>Test 0.0.13</p>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.6.1/d3.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+    <div id="sumStats">Sum of All Stats</div>
+    <div id="Gen1_rightStatTotal">Gen 1: </div>
+    <div id="Gen2_rightStatTotal">Gen 2: </div>
+    <div id="Gen3_rightStatTotal">Gen 3: </div>
+    <div id="Gen4_rightStatTotal">Gen 4: </div>
+    <div id="Gen5_rightStatTotal">Gen 5: </div>
+    <div id="Gen6_rightStatTotal">Gen 6: </div>
+    <div id="Gen7_rightStatTotal">Gen 7: </div>
+    <div id="Gen8_rightStatTotal">Gen 8: </div>
     
     <div id="FirstGraph">
         <svg id="Gen1" width="500" height="600"></svg>
@@ -61,6 +70,7 @@
     <button onclick="shrinkAndMove('FifthGraph', 'Gen5Button', 'Gen5_statTotal', 'Gen5_Title', 'Gen6Button')" id="Gen5Button">Gen 6</button>
     <button onclick="shrinkAndMove('SixthGraph', 'Gen6Button', 'Gen6_statTotal', 'Gen6_Title', 'Gen7Button')" id="Gen6Button">Gen 7</button>
     <button onclick="shrinkAndMove('SeventhGraph', 'Gen7Button', 'Gen7_statTotal', 'Gen7_Title', 'Gen8Button')" id="Gen7Button">Gen 8</button>
+    <button onclick="shrinkAndMove('SeventhGraph', 'Gen7Button', 'Gen7_statTotal', 'Gen7_Title', 'Gen8Button')" id="Gen8Button">Gen 8</button>
     
     <script src="js/script.js"></script>
 

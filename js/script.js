@@ -1,5 +1,6 @@
 // Call the function to load the data and create visualization
 let current_generation = 2;
+let gen1_numbers = null;
 let gen2_numbers = null;
 let gen3_numbers = null;
 let gen4_numbers = null;
@@ -7,6 +8,7 @@ let gen5_numbers = null;
 let gen6_numbers = null;
 let gen7_numbers = null;
 let gen8_numbers = null;
+let gen1_avg = null;
 let gen2_avg = null;
 let gen3_avg = null;
 let gen4_avg = null;
@@ -144,17 +146,25 @@ function setStatTotal(avg, boxID) {
   numberBox.textContent = `Total Stats: ${avg}`;
 }
 
+function setRightStatTotal(avg, boxID, text) {
+  numberBox = document.getElementById(boxID);
+  numberBox.textContent = `${text} ${avg}`;
+  numberBox.style.display = 'flex';
+}
+
 function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
   actuallyShrinkAndMove(graphID, buttonID, statID, titleID, newButtonID);
   if (current_generation == 2) {
     createVisualization(gen2_numbers, '#Gen2');
     setStatTotal(gen2_avg, 'Gen2_statTotal');
+    setRightStatTotal(gen1_avg, 'Gen1_rightStatTotal', 'Gen 1:')
     next_graph = document.getElementById('SecondGraph');
     next_graph.style.display = 'flex';
     current_generation++;
   } else if (current_generation == 3) {
     createVisualization(gen3_numbers, '#Gen3');
     setStatTotal(gen3_avg, 'Gen3_statTotal');
+    setRightStatTotal(gen2_avg, 'Gen2_rightStatTotal', 'Gen 2:')
     next_graph = document.getElementById('ThirdGraph');
     current_generation++;
     next_graph.style.display = 'flex';
@@ -162,30 +172,35 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     current_generation++;
     createVisualization(gen4_numbers, '#Gen4');
     setStatTotal(gen4_avg, 'Gen4_statTotal');
+    setRightStatTotal(gen3_avg, 'Gen3_rightStatTotal', 'Gen 3:')
     next_graph = document.getElementById('FourthGraph');
     next_graph.style.display = 'flex';
   } else if (current_generation == 5) {
     current_generation++;
     createVisualization(gen5_numbers, '#Gen5');
     setStatTotal(gen5_avg, 'Gen5_statTotal');
+    setRightStatTotal(gen4_avg, 'Gen4_rightStatTotal', 'Gen 4:')
     next_graph = document.getElementById('FifthGraph');
     next_graph.style.display = 'flex';
   } else if (current_generation == 6) {
     current_generation++;
     createVisualization(gen6_numbers, '#Gen6');
     setStatTotal(gen6_avg, 'Gen6_statTotal');
+    setRightStatTotal(gen5_avg, 'Gen5_rightStatTotal', 'Gen 5:')
     next_graph = document.getElementById('SixthGraph');
     next_graph.style.display = 'flex';
   } else if (current_generation == 7) {
     current_generation++;
     createVisualization(gen7_numbers, '#Gen7');
     setStatTotal(gen7_avg, 'Gen7_statTotal');
+    setRightStatTotal(gen6_avg, 'Gen6_rightStatTotal', 'Gen 6:')
     next_graph = document.getElementById('SeventhGraph');
     next_graph.style.display = 'flex';
   } else if (current_generation == 8) {
     current_generation++;
     createVisualization(gen8_numbers, '#Gen8');
     setStatTotal(gen8_avg, 'Gen8_statTotal');
+    setRightStatTotal(gen7_avg, 'Gen7_rightStatTotal', 'Gen 7:')
     next_graph = document.getElementById('EigthGraph');
     next_graph.style.display = 'flex';
   }
@@ -203,7 +218,7 @@ function actuallyShrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) 
 
   // remove stat
   stat = document.getElementById(statID);
-  stat.style.display = "none";
+  stat.style.display = 'flex';
 
   // remove title
   title = document.getElementById(titleID);

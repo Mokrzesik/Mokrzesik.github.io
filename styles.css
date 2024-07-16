@@ -4,9 +4,66 @@ body {
   background-color: #f5f5dc;
 }
 
+#FirstGraph {
+  transition: transform 1.0s ease;
+}
+
+#Gen1 {
+  margin-top: 65px;
+}
+
 #Gen1 rect {
   display: flex;
   justify-content: center; /* Horizontally centers the content */
   align-items: center; /* Vertically centers the content */
   fill : blue;
+}
+
+#Gen1_statTotal {
+  position: absolute;
+  top: 250px;
+  right: 650px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#Gen1_Title {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+#nextGenButton {
+  position: absolute;
+  top: 400px;
+  right: 300px;
+  width: 80px;
+  height: 50px;
+  border: 2px solid black;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#nextGenButton:hover {
+  background-color: grey;
+}
+#nextGenButton:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
 }

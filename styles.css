@@ -48,7 +48,7 @@ body {
 #Gen1 text{
   display: flex;
   color: black;
-  font-size: 12px;;
+  font-size: 12px;
 }
 
 #SecondGraph{
@@ -699,7 +699,7 @@ body {
   position: absolute;
   top: 500px;
   left: 40px;
-  display: block;
+  display: flex;
 }
 #Gen1_color rect{
   position: absolute;
@@ -708,4 +708,149 @@ body {
   display: flex;
   stroke: black;
   fill: #003F5C;
+}
+#Gen1_color text {
+  display: flex;
+  color: #003F5C;
+  font-size: 20px;
+}
+
+#Gen2_color {
+  position: absolute;
+  top: 530px;
+  left: 40px;
+  display: none;
+}
+#Gen2_color rect{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  stroke: black;
+  fill: #58508D;
+}
+#Gen2_color text {
+  display: flex;
+  color: #58508D;
+  font-size: 20px;
+}
+
+#Gen3_color {
+  position: absolute;
+  top: 560px;
+  left: 40px;
+  display: none;
+}
+#Gen3_color rect{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  stroke: black;
+  fill: #8A508F;
+}
+#Gen3_color text {
+  display: flex;
+  color: #8A508F;
+  font-size: 20px;
+}
+
+#Gen4_color {
+  position: absolute;
+  top: 590px;
+  left: 40px;
+  display: none;
+}
+#Gen4_color rect{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  stroke: black;
+  fill: #BC5090;
+}
+#Gen4_color text {
+  display: flex;
+  color: #BC5090;
+  font-size: 20px;
+}
+
+#Gen5_color {
+  position: absolute;
+  top: 620px;
+  left: 40px;
+  display: none;
+}
+#Gen5_color rect{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  stroke: black;
+  fill: #de5a79;
+}
+#Gen5_color text {
+  display: flex;
+  color: #de5a79;
+  font-size: 20px;
+}
+
+#Gen6_color {
+  position: absolute;
+  top: 650px;
+  left: 40px;
+  display: none;
+}
+#Gen6_color rect{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  stroke: black;
+  fill: #ff6361;
+}
+#Gen6_color text {
+  display: flex;
+  color: #ff6361;
+  font-size: 20px;
+}
+
+#Gen7_color {
+  position: absolute;
+  top: 680px;
+  left: 40px;
+  display: none;
+}
+#Gen7_color rect{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  stroke: black;
+  fill: #ff8531;
+}
+#Gen7_color text {
+  display: flex;
+  color: #ff8531;
+  font-size: 20px;
+}
+
+#Gen8_color {
+  position: absolute;
+  top: 710px;
+  left: 40px;
+  display: none;
+}
+#Gen8_color rect{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  stroke: black;
+  fill: #ffa600;
+}
+#Gen8_color text {
+  display: flex;
+  color: #ffa600;
+  font-size: 20px;
 }

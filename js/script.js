@@ -174,6 +174,8 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     container = document.querySelector('#Gen1 text');
     container.style.display = 'none';
     max_numbers = gen1_numbers;
+    container = document.getElementById('Gen2_color');
+    container.style.display = 'block';
 
 
   } else if (current_generation == 3) {
@@ -187,6 +189,8 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     setTimeout(() => {
       mergeGraphs(gen2_numbers, '#Gen2', 'Gen2');
     }, 1000);
+    container = document.getElementById('Gen3_color');
+    container.style.display = 'block';
 
   } else if (current_generation == 4) {
     current_generation++;
@@ -199,6 +203,8 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     setTimeout(() => {
       mergeGraphs(gen3_numbers, '#Gen3', 'Gen3');
     }, 1000);
+    container = document.getElementById('Gen4_color');
+    container.style.display = 'block';
 
   } else if (current_generation == 5) {
     current_generation++;
@@ -211,6 +217,8 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     setTimeout(() => {
       mergeGraphs(gen4_numbers, '#Gen4', 'Gen4');
     }, 1000);
+    container = document.getElementById('Gen5_color');
+    container.style.display = 'block';
 
   } else if (current_generation == 6) {
     current_generation++;
@@ -223,6 +231,8 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     setTimeout(() => {
       mergeGraphs(gen5_numbers, '#Gen5', 'Gen5');
     }, 1000);
+    container = document.getElementById('Gen6_color');
+    container.style.display = 'block';
 
 
   } else if (current_generation == 7) {
@@ -236,6 +246,8 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     setTimeout(() => {
       mergeGraphs(gen6_numbers, '#Gen6', 'Gen6');
     }, 1000);
+    container = document.getElementById('Gen7_color');
+    container.style.display = 'block';
 
 
   } else if (current_generation == 8) {
@@ -248,7 +260,11 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     setTimeout(() => {
       mergeGraphs(gen7_numbers, '#Gen7', 'Gen7');
     }, 1000);
-
+    container = document.getElementById('Gen8_color');
+    container.style.display = 'block';
+  } else if (current_generation == 9) {
+    current_generation++;
+    setRightStatTotal(gen8_avg, 'Gen8_rightStatTotal', 'Gen 8:')
   }
 
 

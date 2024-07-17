@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: center; /* Horizontally centers the content */
   align-items: center; /* Vertically centers the content */
-  fill : blue;
+  fill : #003F5C;
 }
 #Gen1_statTotal{
   position: absolute;
@@ -65,7 +65,7 @@ body {
   display: flex;
   justify-content: center; /* Horizontally centers the content */
   align-items: center; /* Vertically centers the content */
-  fill : blue;
+  fill : #58508D;
 }
 #Gen2_statTotal{
   position: absolute;
@@ -112,7 +112,7 @@ body {
   display: flex;
   justify-content: center; /* Horizontally centers the content */
   align-items: center; /* Vertically centers the content */
-  fill : blue;
+  fill : #8A508F;
 }
 #Gen3_statTotal{
   position: absolute;
@@ -159,7 +159,7 @@ body {
   display: flex;
   justify-content: center; /* Horizontally centers the content */
   align-items: center; /* Vertically centers the content */
-  fill : blue;
+  fill : #BC5090;
 }
 #Gen4_statTotal{
   position: absolute;
@@ -206,7 +206,7 @@ body {
   display: flex;
   justify-content: center; /* Horizontally centers the content */
   align-items: center; /* Vertically centers the content */
-  fill : blue;
+  fill : #de5a79;
 }
 #Gen5_statTotal{
   position: absolute;
@@ -253,7 +253,7 @@ body {
   display: flex;
   justify-content: center; /* Horizontally centers the content */
   align-items: center; /* Vertically centers the content */
-  fill : blue;
+  fill : #ff6361;
 }
 #Gen6_statTotal{
   position: absolute;
@@ -300,7 +300,7 @@ body {
   display: flex;
   justify-content: center; /* Horizontally centers the content */
   align-items: center; /* Vertically centers the content */
-  fill : blue;
+  fill : #ff8531;
 }
 #Gen7_statTotal{
   position: absolute;
@@ -347,7 +347,7 @@ body {
   display: flex;
   justify-content: center; /* Horizontally centers the content */
   align-items: center; /* Vertically centers the content */
-  fill : blue;
+  fill : #ffa600;
 }
 #Gen8_statTotal{
   position: absolute;
@@ -380,13 +380,87 @@ body {
   font-size: 12px;;
 }
 
-#SecondGraph{
-  transition: transform 1.0s ease;
-  display: none;
+#CombinedGraph{
+  display: flex;
   position: absolute;
   top: 115px;
   right: 470px;
+  transition: transform 1.0s ease;
 }
+#AllGens{
+  margin-top: 65px;
+}
+#AllGens rect:nth-child(1){
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #003F5C;
+}
+#AllGens rect:nth-child(2){
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #003F5C;
+}
+#AllGens rect:nth-child(3){
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #003F5C;
+}
+#AllGens rect:nth-child(4){
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #003F5C;
+}
+#AllGens rect:nth-child(5){
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #003F5C;
+}
+#AllGens rect:nth-child(6){
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #003F5C;
+}
+
+
+#AllGens_statTotal{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#AllGens_Title{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#AllGens text{
+  display: flex;
+  color: black;
+  font-size: 12px;;
+}
+
+
+
 
 
 #Gen1Button{

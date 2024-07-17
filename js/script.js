@@ -16,6 +16,8 @@ let gen5_avg = null;
 let gen6_avg = null;
 let gen7_avg = null;
 let gen8_avg = null;
+const delay = ms => new Promise(res => setTimeout(res, ms));
+let max_numbers = null;
 
 
 
@@ -161,6 +163,17 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     next_graph = document.getElementById('SecondGraph');
     next_graph.style.display = 'flex';
     current_generation++;
+    createVisualization(gen1_numbers, '#AllGens');
+    container = document.getElementById('CombinedGraph');
+    container.style.transform = 'translate(-450px, -160px)';
+    setTimeout(() => {
+      container.style.display = 'flex';
+    }, 1000);
+    container = document.getElementById("FirstGraph");
+    container.style.display = 'none';
+    max_numbers = gen1_numbers;
+
+
   } else if (current_generation == 3) {
     createVisualization(gen3_numbers, '#Gen3');
     setStatTotal(gen3_avg, 'Gen3_statTotal');
@@ -168,6 +181,11 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     next_graph = document.getElementById('ThirdGraph');
     current_generation++;
     next_graph.style.display = 'flex';
+
+    setTimeout(() => {
+      mergeGraphs(gen2_numbers, '#Gen2', 'Gen2');
+    }, 1000);
+
   } else if (current_generation == 4) {
     current_generation++;
     createVisualization(gen4_numbers, '#Gen4');
@@ -175,6 +193,11 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     setRightStatTotal(gen3_avg, 'Gen3_rightStatTotal', 'Gen 3:')
     next_graph = document.getElementById('FourthGraph');
     next_graph.style.display = 'flex';
+
+    setTimeout(() => {
+      mergeGraphs(gen3_numbers, '#Gen3', 'Gen3');
+    }, 1000);
+
   } else if (current_generation == 5) {
     current_generation++;
     createVisualization(gen5_numbers, '#Gen5');
@@ -182,6 +205,11 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     setRightStatTotal(gen4_avg, 'Gen4_rightStatTotal', 'Gen 4:')
     next_graph = document.getElementById('FifthGraph');
     next_graph.style.display = 'flex';
+
+    setTimeout(() => {
+      mergeGraphs(gen4_numbers, '#Gen4', 'Gen4');
+    }, 1000);
+
   } else if (current_generation == 6) {
     current_generation++;
     createVisualization(gen6_numbers, '#Gen6');
@@ -189,6 +217,12 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     setRightStatTotal(gen5_avg, 'Gen5_rightStatTotal', 'Gen 5:')
     next_graph = document.getElementById('SixthGraph');
     next_graph.style.display = 'flex';
+
+    setTimeout(() => {
+      mergeGraphs(gen5_numbers, '#Gen5', 'Gen5');
+    }, 1000);
+
+
   } else if (current_generation == 7) {
     current_generation++;
     createVisualization(gen7_numbers, '#Gen7');
@@ -196,6 +230,12 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     setRightStatTotal(gen6_avg, 'Gen6_rightStatTotal', 'Gen 6:')
     next_graph = document.getElementById('SeventhGraph');
     next_graph.style.display = 'flex';
+
+    setTimeout(() => {
+      mergeGraphs(gen6_numbers, '#Gen6', 'Gen6');
+    }, 1000);
+
+
   } else if (current_generation == 8) {
     current_generation++;
     createVisualization(gen8_numbers, '#Gen8');
@@ -203,7 +243,13 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     setRightStatTotal(gen7_avg, 'Gen7_rightStatTotal', 'Gen 7:')
     next_graph = document.getElementById('EigthGraph');
     next_graph.style.display = 'flex';
+    setTimeout(() => {
+      mergeGraphs(gen7_numbers, '#Gen7', 'Gen7');
+    }, 1000);
+
   }
+
+
 
 }
 
@@ -218,7 +264,7 @@ function actuallyShrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) 
 
   // remove stat
   stat = document.getElementById(statID);
-  stat.style.display = 'flex';
+  stat.style.display = 'none';
 
   // remove title
   title = document.getElementById(titleID);
@@ -227,6 +273,38 @@ function actuallyShrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) 
   // display next button
   next_button = document.getElementById(newButtonID);
   next_button.style.display = "flex";
+}
+
+function mergeGraphs(secondGen_numbers, secondGen, secondGenID) {
+  for (let i = 1; i < 7; i++) {
+    let firstChildRect = document.querySelector(`#AllGens rect:nth-child(${i})`);
+    let secondChildRect = document.querySelector(`${secondGen} rect:nth-child(${i})`);
+    let firstChildText = document.querySelector(`#AllGens text.bar-text:nth-of-type(${i})`);
+    let secondChildText = document.querySelector(`${secondGen} text.bar-text:nth-of-type(${i})`);
+
+    if (max_numbers[i-1] >= secondGen_numbers[i-1]) {
+      secondChildRect.style.display = 'none';
+      secondChildText.style.display = 'none';
+    } else {
+      firstChildText.style.display = 'none';
+      const cloneRect = secondChildRect.cloneNode(true);
+      const cloneText = secondChildText.cloneNode(true);
+
+      firstChildRect.replaceWith(cloneRect);
+      firstChildText.replaceWith(cloneText);
+      secondChildRect.style.display = 'none';
+      secondChildText.style.display = 'none';
+
+      
+      let rect1 = document.getElementById('AllGens').querySelector(`rect:nth-child(${i})`);
+      let rect2 = document.getElementById(secondGenID).querySelector(`rect:nth-child(${i})`);
+      let styles = window.getComputedStyle(rect2);
+      let fillStyle = styles.getPropertyValue('fill');
+      rect1.style.fill = fillStyle;
+
+      max_numbers[i-1] = secondGen_numbers[i-1];
+    }
+  }
 }
 
 loadCSV();

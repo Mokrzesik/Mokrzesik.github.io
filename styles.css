@@ -694,3 +694,18 @@ body {
   right: 55px;
   display: none;
 }
+
+#Gen1_color {
+  position: absolute;
+  top: 500px;
+  left: 40px;
+  display: block;
+}
+#Gen1_color rect{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  stroke: black;
+  fill: #003F5C;
+}

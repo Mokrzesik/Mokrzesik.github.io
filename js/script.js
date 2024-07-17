@@ -171,6 +171,8 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     }, 1000);
     container = document.getElementById("FirstGraph");
     container.style.display = 'none';
+    container = document.querySelector('#Gen1 text');
+    container.style.display = 'none';
     max_numbers = gen1_numbers;
 
 

@@ -854,3 +854,16 @@ body {
   color: #ffa600;
   font-size: 20px;
 }
+
+#ClickHere text {
+  display: flex;
+  color: black;
+  font-size: 25px;
+  position: absolute;
+  top: 300px;
+  right: 270px;
+}
+.wraptext {
+  width: 10vw;
+  overflow-wrap: break-word;
+}

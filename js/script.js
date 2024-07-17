@@ -16,7 +16,6 @@ let gen5_avg = null;
 let gen6_avg = null;
 let gen7_avg = null;
 let gen8_avg = null;
-const delay = ms => new Promise(res => setTimeout(res, ms));
 let max_numbers = null;
 
 
@@ -57,6 +56,7 @@ async function loadCSV() {
     [gen6_numbers, gen6_avg] = extractGenData(gen6);
     [gen7_numbers, gen7_avg] = extractGenData(gen7);
     [gen8_numbers, gen8_avg] = extractGenData(gen8);
+    console.log(gen8_avg);
 
     createVisualization(gen1_numbers, '#Gen1'); // Call the graph making
     setStatTotal(gen1_avg, 'Gen1_statTotal');
@@ -264,10 +264,13 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     container.style.display = 'block';
   } else if (current_generation == 9) {
     current_generation++;
+    console.log(gen8_avg);
+    console.log(gen7_avg);
     setRightStatTotal(gen8_avg, 'Gen8_rightStatTotal', 'Gen 8:')
+    setTimeout(() => {
+      mergeGraphs(gen8_numbers, '#Gen8', 'Gen8');
+    }, 1000);
   }
-
-
 
 }
 
@@ -289,8 +292,10 @@ function actuallyShrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) 
   title.style.display = "none";
 
   // display next button
-  next_button = document.getElementById(newButtonID);
-  next_button.style.display = "flex";
+  if (newButtonID != null) {
+    next_button = document.getElementById(newButtonID);
+    next_button.style.display = "flex";
+  }
 }
 
 function mergeGraphs(secondGen_numbers, secondGen, secondGenID) {

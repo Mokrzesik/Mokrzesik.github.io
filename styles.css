@@ -1578,3 +1578,11 @@ body {
   align-items: center; /* Vertically centers the content */
   fill : #003F5C;
 }
+
+#description {
+  position: absolute;
+  top: 650px;
+  width: 500px;
+  right: 500px;
+
+}

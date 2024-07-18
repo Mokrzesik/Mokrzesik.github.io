@@ -17,6 +17,7 @@ let gen6_avg = null;
 let gen7_avg = null;
 let gen8_avg = null;
 let max_numbers = null;
+let current_display = 'stats';
 
 
 
@@ -388,17 +389,523 @@ function moveStatsCenter() {
   setTimeout(() => {
     arrow = document.getElementById('arrow');
     arrow.style.display = 'flex';
-  }, 1000)
 
-  setTimeout(() => {
-    increase = document.getElementById('increase');
-    increase.style.display = 'flex';
-  }, 1000)
-
-  setTimeout(() => {
     click = document.getElementById('Click');
     click.style.display = 'flex';
+
+    increase = document.getElementById('increase');
+    increase.style.display = 'flex';
+
+    gen1button = document.getElementById('CenterGen1Graph');
+    gen1button.style.display = 'flex';
+
+    gen2button = document.getElementById('CenterGen2Graph');
+    gen2button.style.display = 'flex';
+
+    gen3button = document.getElementById('CenterGen3Graph');
+    gen3button.style.display = 'flex';
+
+    gen4button = document.getElementById('CenterGen4Graph');
+    gen4button.style.display = 'flex';
+
+    gen5button = document.getElementById('CenterGen5Graph');
+    gen5button.style.display = 'flex';
+
+    gen6button = document.getElementById('CenterGen6Graph');
+    gen6button.style.display = 'flex';
+
+    gen7button = document.getElementById('CenterGen7Graph');
+    gen7button.style.display = 'flex';
+
+    gen8button = document.getElementById('CenterGen8Graph');
+    gen8button.style.display = 'flex';
+
+    statbutton = document.getElementById('CenterStats');
+    statbutton.style.display = 'flex';
+
+    bigGraphButton = document.getElementById('CenterCombined');
+    bigGraphButton.style.display = 'flex';
   }, 1000)
+
+  createVisualization(gen1_numbers, '#Gen1Center');
+  createVisualization(gen2_numbers, '#Gen2Center');
+  createVisualization(gen3_numbers, '#Gen3Center');
+  createVisualization(gen4_numbers, '#Gen4Center');
+  createVisualization(gen5_numbers, '#Gen5Center');
+  createVisualization(gen6_numbers, '#Gen6Center');
+  createVisualization(gen7_numbers, '#Gen7Center');
+  createVisualization(gen8_numbers, '#Gen8Center');
+
+  graph = document.getElementById('FirstGraph');
+  graph.style.display = 'none';
+  graph = document.getElementById('SecondGraph');
+  graph.style.display = 'none';
+  graph = document.getElementById('ThirdGraph');
+  graph.style.display = 'none';
+  graph = document.getElementById('FourthGraph');
+  graph.style.display = 'none';
+  graph = document.getElementById('FifthGraph');
+  graph.style.display = 'none';
+  graph = document.getElementById('SixthGraph');
+  graph.style.display = 'none';
+  graph = document.getElementById('SeventhGraph');
+  graph.style.display = 'none';
+  graph = document.getElementById('EigthGraph');
+  graph.style.display = 'none';
+}
+
+function DisplayGen1() {
+  removeCenter();
+  title = document.getElementById('Gen1_TitleCenter');
+  title.style.display = 'flex';
+
+  total = document.getElementById('FirstGraphCenter');
+  total.style.display = 'flex';
+
+  rects = document.querySelectorAll('#Gen1Center rect');
+  rects.forEach(element => {
+    element.style.display = 'flex';
+  });
+
+  setStatTotal(gen1_avg, 'Gen1_statTotalCenter');
+  stat = document.getElementById('Gen1_statTotalCenter');
+  stat.style.display = 'flex';
+
+  texts = document.querySelectorAll('#FirstGraphCenter text');
+  texts.forEach(element => {
+    element.style.display = 'flex';
+  });
+  current_display = 'gen1';
+}
+function DisplayGen2() {
+  removeCenter();
+  title = document.getElementById('Gen2_TitleCenter');
+  title.style.display = 'flex';
+
+  total = document.getElementById('SecondGraphCenter');
+  total.style.display = 'flex';
+
+  rects = document.querySelectorAll('#Gen2Center rect');
+  rects.forEach(element => {
+    element.style.display = 'flex';
+  });
+
+  setStatTotal(gen1_avg, 'Gen2_statTotalCenter');
+  stat = document.getElementById('Gen2_statTotalCenter');
+  stat.style.display = 'flex';
+
+  texts = document.querySelectorAll('#SecondGraphCenter text');
+  texts.forEach(element => {
+    element.style.display = 'flex';
+  });
+  current_display = 'gen2';
+}
+function DisplayGen3() {
+  removeCenter();
+  title = document.getElementById('Gen3_TitleCenter');
+  title.style.display = 'flex';
+
+  total = document.getElementById('ThirdGraphCenter');
+  total.style.display = 'flex';
+
+  rects = document.querySelectorAll('#Gen3Center rect');
+  rects.forEach(element => {
+    element.style.display = 'flex';
+  });
+
+  setStatTotal(gen1_avg, 'Gen3_statTotalCenter');
+  stat = document.getElementById('Gen3_statTotalCenter');
+  stat.style.display = 'flex';
+
+  texts = document.querySelectorAll('#ThirdGraphCenter text');
+  texts.forEach(element => {
+    element.style.display = 'flex';
+  });
+  current_display = 'gen3';
+}
+function DisplayGen4() {
+  removeCenter();
+  title = document.getElementById('Gen4_TitleCenter');
+  title.style.display = 'flex';
+
+  total = document.getElementById('FourthGraphCenter');
+  total.style.display = 'flex';
+
+  rects = document.querySelectorAll('#Gen4Center rect');
+  rects.forEach(element => {
+    element.style.display = 'flex';
+  });
+
+  setStatTotal(gen1_avg, 'Gen4_statTotalCenter');
+  stat = document.getElementById('Gen4_statTotalCenter');
+  stat.style.display = 'flex';
+
+  texts = document.querySelectorAll('#FourthGraphCenter text');
+  texts.forEach(element => {
+    element.style.display = 'flex';
+  });
+  current_display = 'gen4';
+}
+function DisplayGen5() {
+  removeCenter();
+  title = document.getElementById('Gen5_TitleCenter');
+  title.style.display = 'flex';
+
+  total = document.getElementById('FifthGraphCenter');
+  total.style.display = 'flex';
+
+  rects = document.querySelectorAll('#Gen5Center rect');
+  rects.forEach(element => {
+    element.style.display = 'flex';
+  });
+
+  setStatTotal(gen1_avg, 'Gen5_statTotalCenter');
+  stat = document.getElementById('Gen5_statTotalCenter');
+  stat.style.display = 'flex';
+
+  texts = document.querySelectorAll('#FifthGraphCenter text');
+  texts.forEach(element => {
+    element.style.display = 'flex';
+  });
+  current_display = 'gen5';
+}
+function DisplayGen6() {
+  removeCenter();
+  title = document.getElementById('Gen6_TitleCenter');
+  title.style.display = 'flex';
+
+  total = document.getElementById('SixthGraphCenter');
+  total.style.display = 'flex';
+
+  rects = document.querySelectorAll('#Gen6Center rect');
+  rects.forEach(element => {
+    element.style.display = 'flex';
+  });
+
+  setStatTotal(gen1_avg, 'Gen6_statTotalCenter');
+  stat = document.getElementById('Gen6_statTotalCenter');
+  stat.style.display = 'flex';
+
+  texts = document.querySelectorAll('#SixthGraphCenter text');
+  texts.forEach(element => {
+    element.style.display = 'flex';
+  });
+  current_display = 'gen6';
+}
+function DisplayGen7() {
+  removeCenter();
+  title = document.getElementById('Gen7_TitleCenter');
+  title.style.display = 'flex';
+
+  total = document.getElementById('SeventhGraphCenter');
+  total.style.display = 'flex';
+
+  rects = document.querySelectorAll('#Gen7Center rect');
+  rects.forEach(element => {
+    element.style.display = 'flex';
+  });
+
+  setStatTotal(gen1_avg, 'Gen7_statTotalCenter');
+  stat = document.getElementById('Gen7_statTotalCenter');
+  stat.style.display = 'flex';
+
+  texts = document.querySelectorAll('#SeventhGraphCenter text');
+  texts.forEach(element => {
+    element.style.display = 'flex';
+  });
+  current_display = 'gen7';
+}
+function DisplayGen8() {
+  removeCenter();
+  title = document.getElementById('Gen8_TitleCenter');
+  title.style.display = 'flex';
+
+  total = document.getElementById('EigthGraphCenter');
+  total.style.display = 'flex';
+
+  rects = document.querySelectorAll('#Gen8Center rect');
+  rects.forEach(element => {
+    element.style.display = 'flex';
+  });
+
+  setStatTotal(gen1_avg, 'Gen8_statTotalCenter');
+  stat = document.getElementById('Gen8_statTotalCenter');
+  stat.style.display = 'flex';
+
+  texts = document.querySelectorAll('#EigthGraphCenter text');
+  texts.forEach(element => {
+    element.style.display = 'flex';
+  });
+  current_display = 'gen8';
+}
+function DisplayTotals() {
+  removeCenter();
+  unReverseStat();
+  current_display = 'stats';
+}
+function DisplayCombined() {
+  removeCenter();
+  container = document.getElementById('CombinedGraph');
+  container.style.transform = 'translate(0px, 0px)';
+  current_display = 'combined';
+
+}
+
+function removeCenter() {
+  if (current_display == 'stats') {
+    reverseStat()
+  } else if (current_display == 'gen1') {
+    title = document.getElementById('Gen1_TitleCenter');
+    title.style.display = 'none';
+
+    total = document.getElementById('FirstGraphCenter');
+    total.style.display = 'none';
+
+    rects = document.querySelectorAll('#Gen1Center rect');
+    rects.forEach(element => {
+      element.style.display = 'none';
+    });
+
+    setStatTotal(gen1_avg, 'Gen1_statTotalCenter');
+    stat = document.getElementById('Gen1_statTotalCenter');
+    stat.style.display = 'none';
+
+    texts = document.querySelectorAll('#FirstGraphCenter text');
+    texts.forEach(element => {
+      element.style.display = 'none';
+    });
+  } else if (current_display == 'gen2') {
+    title = document.getElementById('Gen2_TitleCenter');
+    title.style.display = 'none';
+
+    total = document.getElementById('SecondGraphCenter');
+    total.style.display = 'none';
+
+    rects = document.querySelectorAll('#Gen2Center rect');
+    rects.forEach(element => {
+      element.style.display = 'none';
+    });
+
+    setStatTotal(gen1_avg, 'Gen2_statTotalCenter');
+    stat = document.getElementById('Gen2_statTotalCenter');
+    stat.style.display = 'none';
+
+    texts = document.querySelectorAll('#SecondGraphCenter text');
+    texts.forEach(element => {
+      element.style.display = 'none';
+    });
+  } else if (current_display == 'gen3') {
+    title = document.getElementById('Gen3_TitleCenter');
+    title.style.display = 'none';
+
+    total = document.getElementById('ThirdGraphCenter');
+    total.style.display = 'none';
+
+    rects = document.querySelectorAll('#Gen3Center rect');
+    rects.forEach(element => {
+      element.style.display = 'none';
+    });
+
+    setStatTotal(gen1_avg, 'Gen3_statTotalCenter');
+    stat = document.getElementById('Gen3_statTotalCenter');
+    stat.style.display = 'none';
+
+    texts = document.querySelectorAll('#ThirdGraphCenter text');
+    texts.forEach(element => {
+      element.style.display = 'none';
+    });
+  } else if (current_display == 'gen4') {
+    title = document.getElementById('Gen4_TitleCenter');
+    title.style.display = 'none';
+
+    total = document.getElementById('FourthGraphCenter');
+    total.style.display = 'none';
+
+    rects = document.querySelectorAll('#Gen4Center rect');
+    rects.forEach(element => {
+      element.style.display = 'none';
+    });
+
+    setStatTotal(gen1_avg, 'Gen4_statTotalCenter');
+    stat = document.getElementById('Gen4_statTotalCenter');
+    stat.style.display = 'none';
+
+    texts = document.querySelectorAll('#FourthGraphCenter text');
+    texts.forEach(element => {
+      element.style.display = 'none';
+    });
+  } else if (current_display == 'gen5') {
+    title = document.getElementById('Gen5_TitleCenter');
+    title.style.display = 'none';
+
+    total = document.getElementById('FifthGraphCenter');
+    total.style.display = 'none';
+
+    rects = document.querySelectorAll('#Gen5Center rect');
+    rects.forEach(element => {
+      element.style.display = 'none';
+    });
+
+    setStatTotal(gen1_avg, 'Gen5_statTotalCenter');
+    stat = document.getElementById('Gen5_statTotalCenter');
+    stat.style.display = 'none';
+
+    texts = document.querySelectorAll('#FifthGraphCenter text');
+    texts.forEach(element => {
+      element.style.display = 'none';
+    });
+  } else if (current_display == 'gen6') {
+    title = document.getElementById('Gen6_TitleCenter');
+    title.style.display = 'none';
+
+    total = document.getElementById('SixthGraphCenter');
+    total.style.display = 'none';
+
+    rects = document.querySelectorAll('#Gen6Center rect');
+    rects.forEach(element => {
+      element.style.display = 'none';
+    });
+
+    setStatTotal(gen1_avg, 'Gen6_statTotalCenter');
+    stat = document.getElementById('Gen6_statTotalCenter');
+    stat.style.display = 'none';
+
+    texts = document.querySelectorAll('#SixthGraphCenter text');
+    texts.forEach(element => {
+      element.style.display = 'none';
+    });
+  } else if (current_display == 'gen7') {
+    title = document.getElementById('Gen7_TitleCenter');
+    title.style.display = 'none';
+
+    total = document.getElementById('SeventhGraphCenter');
+    total.style.display = 'none';
+
+    rects = document.querySelectorAll('#Gen7Center rect');
+    rects.forEach(element => {
+      element.style.display = 'none';
+    });
+
+    setStatTotal(gen1_avg, 'Gen7_statTotalCenter');
+    stat = document.getElementById('Gen7_statTotalCenter');
+    stat.style.display = 'none';
+
+    texts = document.querySelectorAll('#SeventhGraphCenter text');
+    texts.forEach(element => {
+      element.style.display = 'none';
+    });
+  } else if (current_display == 'gen8') {
+    title = document.getElementById('Gen8_TitleCenter');
+    title.style.display = 'none';
+
+    total = document.getElementById('EigthGraphCenter');
+    total.style.display = 'none';
+
+    rects = document.querySelectorAll('#Gen8Center rect');
+    rects.forEach(element => {
+      element.style.display = 'none';
+    });
+
+    setStatTotal(gen1_avg, 'Gen8_statTotalCenter');
+    stat = document.getElementById('Gen8_statTotalCenter');
+    stat.style.display = 'none';
+
+    texts = document.querySelectorAll('#EigthGraphCenter text');
+    texts.forEach(element => {
+      element.style.display = 'none';
+    });
+  } else if (current_display == 'combined') {
+    container = document.getElementById('CombinedGraph');
+    container.style.transform = 'translate(-450px, -160px)';
+  }
+}
+
+function reverseStat() {
+  title = document.getElementById('sumStats');
+  title.style.transform = 'translate(0px, 0px)';
+  title.style.fontSize = '16px';
+
+  gens = document.getElementById('Gen1_rightStatTotal');
+  gens.style.transform = 'translate(0px, 0px)';
+  gens.style.fontSize = '16px';
+  
+  gens = document.getElementById('Gen2_rightStatTotal');
+  gens.style.transform = 'translate(0px, 0px)';
+  gens.style.fontSize = '16px';
+
+  gens = document.getElementById('Gen3_rightStatTotal');
+  gens.style.transform = 'translate(0px, 0px)';
+  gens.style.fontSize = '16px';
+
+  gens = document.getElementById('Gen4_rightStatTotal');
+  gens.style.transform = 'translate(0px, 0px)';
+  gens.style.fontSize = '16px';
+
+  gens = document.getElementById('Gen5_rightStatTotal');
+  gens.style.transform = 'translate(0px, 0px)';
+  gens.style.fontSize = '16px';
+
+  gens = document.getElementById('Gen6_rightStatTotal');
+  gens.style.transform = 'translate(0px, 0px)';
+  gens.style.fontSize = '16px';
+
+  gens = document.getElementById('Gen7_rightStatTotal');
+  gens.style.transform = 'translate(0px, 0px)';
+  gens.style.fontSize = '16px';
+
+  test = document.getElementById('Gen8_rightStatTotal');
+  test.style.transform = 'translate(0px, 0px)';
+  test.style.fontSize = '16px';
+
+  arrow = document.getElementById('arrow');
+  arrow.style.display = 'none';
+
+  increase = document.getElementById('increase');
+  increase.style.display = 'none';
+}
+
+function unReverseStat() {
+  title = document.getElementById('sumStats');
+  title.style.transform = 'translate(-535px, 150px)';
+  title.style.fontSize = '40px';
+
+  gens = document.getElementById('Gen1_rightStatTotal');
+  gens.style.transform = 'translate(-580px, 175px)';
+  gens.style.fontSize = '32px';
+
+  gens = document.getElementById('Gen2_rightStatTotal');
+  gens.style.transform = 'translate(-580px, 200px)';
+  gens.style.fontSize = '32px';
+
+  gens = document.getElementById('Gen3_rightStatTotal');
+  gens.style.transform = 'translate(-580px, 225px)';
+  gens.style.fontSize = '32px';
+
+  gens = document.getElementById('Gen4_rightStatTotal');
+  gens.style.transform = 'translate(-580px, 250px)';
+  gens.style.fontSize = '32px';
+
+  gens = document.getElementById('Gen5_rightStatTotal');
+  gens.style.transform = 'translate(-580px, 275px)';
+  gens.style.fontSize = '32px';
+
+  gens = document.getElementById('Gen6_rightStatTotal');
+  gens.style.transform = 'translate(-580px, 300px)';
+  gens.style.fontSize = '32px';
+
+  gens = document.getElementById('Gen7_rightStatTotal');
+  gens.style.transform = 'translate(-580px, 325px)';
+  gens.style.fontSize = '32px';
+
+  test = document.getElementById('Gen8_rightStatTotal');
+  test.style.transform = 'translate(-580px, 350px)';
+  test.style.fontSize = '32px';
+
+  arrow = document.getElementById('arrow');
+  arrow.style.display = 'flex';
+
+  increase = document.getElementById('increase');
+  increase.style.display = 'flex';
 }
 
 

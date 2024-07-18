@@ -931,3 +931,650 @@ body {
   width: 10vw;
   overflow-wrap: break-word;
 }
+
+
+#CenterGen1Graph {
+  position: absolute;
+  top: 210px;
+  right: 305px;
+  width: 75px;
+  height: 40px;
+  border: 2px solid black;
+  display: none;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#CenterGen1Graph:hover {
+  background-color: grey;
+}
+#CenterGen1Graph:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#CenterGen2Graph {
+  position: absolute;
+  top: 260px;
+  right: 305px;
+  width: 75px;
+  height: 40px;
+  border: 2px solid black;
+  display: none;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#CenterGen2Graph:hover {
+  background-color: grey;
+}
+#CenterGen2Graph:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#CenterGen3Graph {
+  position: absolute;
+  top: 310px;
+  right: 305px;
+  width: 75px;
+  height: 40px;
+  border: 2px solid black;
+  display: none;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#CenterGen3Graph:hover {
+  background-color: grey;
+}
+#CenterGen3Graph:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#CenterGen4Graph {
+  position: absolute;
+  top: 360px;
+  right: 305px;
+  width: 75px;
+  height: 40px;
+  border: 2px solid black;
+  display: none;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#CenterGen4Graph:hover {
+  background-color: grey;
+}
+#CenterGen4Graph:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#CenterGen5Graph {
+  position: absolute;
+  top: 410px;
+  right: 305px;
+  width: 75px;
+  height: 40px;
+  border: 2px solid black;
+  display: none;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#CenterGen5Graph:hover {
+  background-color: grey;
+}
+#CenterGen5Graph:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#CenterGen6Graph {
+  position: absolute;
+  top: 460px;
+  right: 305px;
+  width: 75px;
+  height: 40px;
+  border: 2px solid black;
+  display: none;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#CenterGen6Graph:hover {
+  background-color: grey;
+}
+#CenterGen6Graph:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#CenterGen7Graph {
+  position: absolute;
+  top: 510px;
+  right: 305px;
+  width: 75px;
+  height: 40px;
+  border: 2px solid black;
+  display: none;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#CenterGen7Graph:hover {
+  background-color: grey;
+}
+#CenterGen7Graph:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#CenterGen8Graph {
+  position: absolute;
+  top: 560px;
+  right: 305px;
+  width: 75px;
+  height: 40px;
+  border: 2px solid black;
+  display: none;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#CenterGen8Graph:hover {
+  background-color: grey;
+}
+#CenterGen8Graph:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#CenterStats {
+  position: absolute;
+  top: 610px;
+  right: 305px;
+  width: 75px;
+  height: 40px;
+  border: 2px solid black;
+  display: none;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#CenterStats:hover {
+  background-color: grey;
+}
+#CenterStats:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+#CenterCombined {
+  position: absolute;
+  top: 660px;
+  right: 305px;
+  width: 75px;
+  height: 40px;
+  border: 2px solid black;
+  display: none;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px black; 
+}
+#CenterCombined:hover {
+  background-color: grey;
+}
+#CenterCombined:active {
+  background-color: darkgrey;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(4px);
+}
+
+
+
+
+#FirstGraphCenter{
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+  transition: transform 1.0s ease;
+}
+#Gen1Center{
+  margin-top: 65px;
+}
+#Gen1Center rect{
+  display: none;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #003F5C;
+}
+#Gen1_statTotalCenter{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Gen1_TitleCenter{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#Gen1Center text{
+  display: none;
+  color: black;
+  font-size: 12px;
+}
+
+#SecondGraphCenter{
+  transition: transform 1.0s ease;
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+}
+#Gen2Center{
+  margin-top: 65px;
+}
+#Gen2Center rect{
+  display: none;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #58508D;
+}
+#Gen2_statTotalCenter{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Gen2_TitleCenter{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#Gen2Center text{
+  display: none;
+  color: black;
+  font-size: 12px;;
+}
+
+#ThirdGraphCenter{
+  transition: transform 1.0s ease;
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+}
+#Gen3Center{
+  margin-top: 65px;
+}
+#Gen3Center rect{
+  display: none;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #8A508F;
+}
+#Gen3_statTotalCenter{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Gen3_TitleCenter{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#Gen3Center text{
+  display: none;
+  color: black;
+  font-size: 12px;;
+}
+
+#FourthGraphCenter{
+  transition: transform 1.0s ease;
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+}
+#Gen4Center{
+  margin-top: 65px;
+}
+#Gen4Center rect{
+  display: none;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #BC5090;
+}
+#Gen4_statTotalCenter{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Gen4_TitleCenter{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#Gen4Center text{
+  display: none;
+  color: black;
+  font-size: 12px;;
+}
+
+#FifthGraphCenter{
+  transition: transform 1.0s ease;
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+}
+#Gen5Center{
+  margin-top: 65px;
+}
+#Gen5Center rect{
+  display: none;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #de5a79;
+}
+#Gen5_statTotalCenter{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Gen5_TitleCenter{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#Gen5Center text{
+  display: none;
+  color: black;
+  font-size: 12px;;
+}
+
+#SixthGraphCenter{
+  transition: transform 1.0s ease;
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+}
+#Gen6Center{
+  margin-top: 65px;
+}
+#Gen6Center rect{
+  display: none;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #ff6361;
+}
+#Gen6_statTotalCenter{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Gen6_TitleCenter{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#Gen6Center text{
+  display: none;
+  color: black;
+  font-size: 12px;;
+}
+
+#SeventhGraphCenter{
+  transition: transform 1.0s ease;
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+}
+#Gen7Center{
+  margin-top: 65px;
+}
+#Gen7Center rect{
+  display: none;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #ff8531;
+}
+#Gen7_statTotalCenter{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Gen7_TitleCenter{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#Gen7Center text{
+  display: none;
+  color: black;
+  font-size: 12px;;
+}
+
+#EigthGraphCenter{
+  transition: transform 1.0s ease;
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+}
+#Gen8Center{
+  margin-top: 65px;
+}
+#Gen8Center rect{
+  display: none;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #ffa600;
+}
+#Gen8_statTotalCenter{
+  position: absolute;
+  top: 75px;
+  right: 175px;
+  width: 150px;
+  height: 50px;
+  border: 2px solid black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Gen8_TitleCenter{
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+#Gen8Center text{
+  display: none;
+  color: black;
+  font-size: 12px;;
+}
+
+#CombinedGraphCenter{
+  display: none;
+  position: absolute;
+  top: 115px;
+  right: 470px;
+  transition: transform 1.0s ease;
+}
+#AllGensCenter{
+  margin-top: 65px;
+}
+#AllGensCenter rect:nth-child(1){
+  display: none;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #003F5C;
+}
+#AllGensCenter rect:nth-child(2){
+  display: none;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #003F5C;
+}
+#AllGensCenter rect:nth-child(3){
+  display: none;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #003F5C;
+}
+#AllGensCenter rect:nth-child(4){
+  display: none;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #003F5C;
+}
+#AllGensCenter rect:nth-child(5){
+  display: none;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #003F5C;
+}
+#AllGensCenter rect:nth-child(6){
+  display: none;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  fill : #003F5C;
+}

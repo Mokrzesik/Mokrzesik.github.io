@@ -30,7 +30,7 @@
         <text class="wraptext">Click Here for Next Generation</text>
     </div>
     <div id="Click">
-        <text class="wraptext">Choose Generation</text>
+        <text class="wraptext">Choose Graph</text>
     </div>
     <div id="increase">
         <p class="verticaltext">INCREASING</p>
@@ -119,6 +119,64 @@
     <button onclick="shrinkAndMove('SixthGraph', 'Gen6Button', 'Gen6_statTotal', 'Gen6_Title', 'Gen7Button')" id="Gen6Button">Gen 7</button>
     <button onclick="shrinkAndMove('SeventhGraph', 'Gen7Button', 'Gen7_statTotal', 'Gen7_Title', 'Gen8Button')" id="Gen7Button">Gen 8</button>
     <button onclick="shrinkAndMove('EigthGraph', 'Gen8Button', 'Gen8_statTotal', 'Gen8_Title', null)" id="Gen8Button">Total Stats</button>
+    
+
+    <button onclick="DisplayGen1()" id="CenterGen1Graph">Gen 1 </button>
+    <button onclick="DisplayGen2()" id="CenterGen2Graph">Gen 2</button>
+    <button onclick="DisplayGen3()" id="CenterGen3Graph">Gen 3</button>
+    <button onclick="DisplayGen4()" id="CenterGen4Graph">Gen 4</button>
+    <button onclick="DisplayGen5()" id="CenterGen5Graph">Gen 5</button>
+    <button onclick="DisplayGen6()" id="CenterGen6Graph">Gen 6</button>
+    <button onclick="DisplayGen7()" id="CenterGen7Graph">Gen 7</button>
+    <button onclick="DisplayGen8()" id="CenterGen8Graph">Gen 8</button>
+    <button onclick="DisplayTotals()" id="CenterStats">Total Stats</button>
+    <button onclick="DisplayCombined()" id="CenterCombined">Max Stats</button>
+
+
+    <div id="FirstGraphCenter">
+        <svg id="Gen1Center" width="500" height="600"></svg>
+        <div id="Gen1_statTotalCenter">Total Stats: </div>
+        <div id="Gen1_TitleCenter">Generation 1</div>
+    </div>
+    <div id="SecondGraphCenter">
+        <svg id="Gen2Center" width="500" height="600"></svg>
+        <div id="Gen2_statTotalCenter">Total Stats: </div>
+        <div id="Gen2_TitleCenter">Generation 2</div>
+    </div>
+    <div id="ThirdGraphCenter">
+        <svg id="Gen3Center" width="500" height="600"></svg>
+        <div id="Gen3_statTotalCenter">Total Stats: </div>
+        <div id="Gen3_TitleCenter">Generation 3</div>
+    </div>
+    <div id="FourthGraphCenter">
+        <svg id="Gen4Center" width="500" height="600"></svg>
+        <div id="Gen4_statTotalCenter">Total Stats: </div>
+        <div id="Gen4_TitleCenter">Generation 4</div>
+    </div>
+    <div id="FifthGraphCenter">
+        <svg id="Gen5Center" width="500" height="600"></svg>
+        <div id="Gen5_statTotalCenter">Total Stats: </div>
+        <div id="Gen5_TitleCenter">Generation 5</div>
+    </div>
+    <div id="SixthGraphCenter">
+        <svg id="Gen6Center" width="500" height="600"></svg>
+        <div id="Gen6_statTotalCenter">Total Stats: </div>
+        <div id="Gen6_TitleCenter">Generation 6</div>
+    </div>
+    <div id="SeventhGraphCenter">
+        <svg id="Gen7Center" width="500" height="600"></svg>
+        <div id="Gen7_statTotalCenter">Total Stats: </div>
+        <div id="Gen7_TitleCenter">Generation 7</div>
+    </div>
+    <div id="EigthGraphCenter">
+        <svg id="Gen8Center" width="500" height="600"></svg>
+        <div id="Gen8_statTotalCenter">Total Stats: </div>
+        <div id="Gen8_TitleCenter">Generation 8</div>
+    </div>
+    <div id="CombinedGraphCenter">
+        <svg id="AllGensCenter" width="500" height="600"></svg>
+    </div>
+    
     
     <script src="js/script.js"></script>
 

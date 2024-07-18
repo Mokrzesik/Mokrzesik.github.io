@@ -56,7 +56,6 @@ async function loadCSV() {
     [gen6_numbers, gen6_avg] = extractGenData(gen6);
     [gen7_numbers, gen7_avg] = extractGenData(gen7);
     [gen8_numbers, gen8_avg] = extractGenData(gen8);
-    console.log(gen8_avg);
 
     createVisualization(gen1_numbers, '#Gen1'); // Call the graph making
     setStatTotal(gen1_avg, 'Gen1_statTotal');
@@ -264,14 +263,13 @@ function shrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
     container.style.display = 'block';
   } else if (current_generation == 9) {
     current_generation++;
-    console.log(gen8_avg);
-    console.log(gen7_avg);
     setRightStatTotal(gen8_avg, 'Gen8_rightStatTotal', 'Gen 8:')
     setTimeout(() => {
       mergeGraphs(gen8_numbers, '#Gen8', 'Gen8');
     }, 1000);
-  }
+    moveStatsCenter();
 
+  }
 }
 
 function actuallyShrinkAndMove(graphID, buttonID, statID, titleID, newButtonID) {
@@ -329,5 +327,79 @@ function mergeGraphs(secondGen_numbers, secondGen, secondGenID) {
     }
   }
 }
+
+function moveStatsCenter() {
+
+  title = document.getElementById('sumStats');
+  title.style.transform = 'translate(-535px, 150px)';
+  title.style.fontSize = '40px';
+
+  text = document.getElementById('ClickHere');
+  text.style.display = 'none';
+
+  setTimeout(() => {
+    gens = document.getElementById('Gen1_rightStatTotal');
+    gens.style.transform = 'translate(-580px, 175px)';
+    gens.style.fontSize = '32px';
+  }, 500);
+
+  setTimeout(() => {
+    gens = document.getElementById('Gen2_rightStatTotal');
+    gens.style.transform = 'translate(-580px, 200px)';
+    gens.style.fontSize = '32px';
+  }, 500);
+
+  setTimeout(() => {
+    gens = document.getElementById('Gen3_rightStatTotal');
+    gens.style.transform = 'translate(-580px, 225px)';
+    gens.style.fontSize = '32px';
+  }, 500);
+
+  setTimeout(() => {
+    gens = document.getElementById('Gen4_rightStatTotal');
+    gens.style.transform = 'translate(-580px, 250px)';
+    gens.style.fontSize = '32px';
+  }, 500);
+
+  setTimeout(() => {
+    gens = document.getElementById('Gen5_rightStatTotal');
+    gens.style.transform = 'translate(-580px, 275px)';
+    gens.style.fontSize = '32px';
+  }, 500);
+
+  setTimeout(() => {
+    gens = document.getElementById('Gen6_rightStatTotal');
+    gens.style.transform = 'translate(-580px, 300px)';
+    gens.style.fontSize = '32px';
+  }, 500);
+
+  setTimeout(() => {
+    gens = document.getElementById('Gen7_rightStatTotal');
+    gens.style.transform = 'translate(-580px, 325px)';
+    gens.style.fontSize = '32px';
+  }, 500);
+
+  setTimeout(() => {
+    test = document.getElementById('Gen8_rightStatTotal');
+    test.style.transform = 'translate(-580px, 350px)';
+    test.style.fontSize = '32px';
+  }, 500);
+
+  setTimeout(() => {
+    arrow = document.getElementById('arrow');
+    arrow.style.display = 'flex';
+  }, 1000)
+
+  setTimeout(() => {
+    increase = document.getElementById('increase');
+    increase.style.display = 'flex';
+  }, 1000)
+
+  setTimeout(() => {
+    click = document.getElementById('Click');
+    click.style.display = 'flex';
+  }, 1000)
+}
+
 
 loadCSV();

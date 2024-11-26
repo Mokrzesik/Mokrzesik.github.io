@@ -119,7 +119,7 @@ header h1 {
 
 .drink h3 {
   font-size: 1.5rem;
-  font-family: fantasy;
+  font-family: monospace;
   color: #e53935; /* drink titles */
 }
 

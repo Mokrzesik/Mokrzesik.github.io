@@ -14,6 +14,27 @@ body {
   padding: 1rem;
 }
 
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: url('images/Holidays-at-the-Magic-Kingdom_Full_57965.webp') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Darker overlay */
+  z-index: -1; /* Keep it behind the text */
+}
+
 /* Header Styling */
 header {
   text-align: center;
@@ -33,11 +54,12 @@ header h1 {
 
 .drink-category h2 {
   font-size: 1.8rem;
-  color: #ffcc00;
+  color: #ffcc00; /* Gold for section headers */
   text-align: center;
   margin-bottom: 1rem;
   border-bottom: 2px solid #ffcc00;
   padding-bottom: 0.5rem;
+  animation: glow 1.5s infinite alternate; /* Festive glow */
 }
 
 /* Drink Items */
@@ -51,12 +73,12 @@ header h1 {
 
 .drink h3 {
   font-size: 1.4rem;
-  color: #ffcc00;
+  color: #ff4500; /* Orange-red for drink titles */
 }
 
 .drink p {
   font-size: 1rem;
-  color: #ffd966;
+  color: #add8e6; /* Light blue for descriptions */
 }
 
 /* Footer */
@@ -68,10 +90,6 @@ footer {
 }
 
 /* Festive Animations */
-.drink-category h2 {
-  animation: glow 1.5s infinite alternate;
-}
-
 @keyframes glow {
   from {
     text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff9900, 0 0 30px #ff6600;

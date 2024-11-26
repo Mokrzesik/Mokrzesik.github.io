@@ -48,7 +48,7 @@ body::before {
 
 @media (max-width: 768px) {
   .logo {
-    width: 150px; /* Smaller size for mobile devices */
+    width: 175px; /* Smaller size for mobile devices */
   }
 }
 

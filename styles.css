@@ -35,6 +35,17 @@ body::before {
   z-index: -1; /* Keep it behind the text */
 }
 
+/* Logo Styling */
+.logo-container {
+  text-align: center;
+  margin-bottom: 2rem; /* Space between logo and header */
+}
+
+.logo {
+  width: 400px; /* Adjust size of the logo */
+  height: auto;
+}
+
 /* Header Styling */
 header {
   text-align: center;

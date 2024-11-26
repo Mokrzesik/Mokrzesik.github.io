@@ -103,8 +103,8 @@ header h1 {
   padding-bottom: 0.5rem;
   text-shadow: 
     1px 1px 2px #000000, /* Black shadow for contrast */
-    0 0 3px #4caf50,     /* Soft green glow */
-    0 0 5px #4caf50;     /* Gentle green glow */
+    0 0 3px #fff,     /* Soft green glow */
+    0 0 5px #fff;     /* Gentle green glow */
   animation: glow 1.5s infinite alternate; /* Festive glow */
 }
 
@@ -118,7 +118,8 @@ header h1 {
 }
 
 .drink h3 {
-  font-size: 1.4rem;
+  font-size: 2.0rem;
+  font-family: fantasy;
   color: #e53935; /* drink titles */
 }
 

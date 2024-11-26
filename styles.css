@@ -62,8 +62,14 @@ header {
 
 header h1 {
   font-size: 2.5rem;
-  color: #ffcc00;
-  text-shadow: 2px 2px 4px #000;
+  color: #ffcc00; /* A golden yellow for the main text */
+  text-align: center;
+  text-shadow: 
+    1px 1px 3px rgba(0, 0, 0, 0.6), /* Soft black shadow for better contrast */
+    0 0 5px #ff0000,  /* Soft red glow */
+    0 0 10px #ff0000,  /* Slightly stronger red glow */
+    0 0 15px #00b300;  /* Very subtle green glow */
+  font-weight: bold; /* Bold text for emphasis */
 }
 
 /* Drink Categories */
@@ -73,11 +79,12 @@ header h1 {
 
 .drink-category h2 {
   font-size: 1.8rem;
-  color: #ffcc00; /* Gold for section headers */
+  color: #40e0d0; /* Turquoise for section headers */
   text-align: center;
   margin-bottom: 1rem;
   border-bottom: 2px solid #ffcc00;
   padding-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px #000000; /* Apply a black shadow to enhance text contrast */
   animation: glow 1.5s infinite alternate; /* Festive glow */
 }
 
@@ -92,12 +99,12 @@ header h1 {
 
 .drink h3 {
   font-size: 1.4rem;
-  color: #ff4500; /* Orange-red for drink titles */
+  color: #228b22; /* Forest Green for drink titles */
 }
 
 .drink p {
   font-size: 1rem;
-  color: #add8e6; /* Light blue for descriptions */
+  color: #ffffff; /* White for descriptions */
 }
 
 /* Footer */
@@ -106,16 +113,6 @@ footer {
   margin-top: 2rem;
   font-size: 0.9rem;
   color: #ffd966;
-}
-
-/* Festive Animations */
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff9900, 0 0 30px #ff6600;
-  }
-  to {
-    text-shadow: 0 0 20px #ff9900, 0 0 30px #ff6600, 0 0 40px #cc3300;
-  }
 }
 
 /* Responsive Design */

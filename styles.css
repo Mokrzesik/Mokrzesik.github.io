@@ -105,7 +105,7 @@ header h1 {
 
 /* Drink Items */
 .drink {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 12px;
@@ -118,6 +118,7 @@ header h1 {
   color: #ff3333; /* drink titles */
   font-weight: bold;
   -webkit-text-stroke: 1.0px black; /* White border */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Stronger shadow for pop-out effect */
 }
 
 .drink p {

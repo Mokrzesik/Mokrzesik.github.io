@@ -13,6 +13,45 @@
   font-style: normal;
 }
 
+/* Fixed Navigation Bar */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Space between buttons */
+  padding: 0.5rem 0;
+  z-index: 1000; /* Ensure it stays on top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Buttons */
+.nav-button {
+  color: #ffcc00; /* Golden color matching your theme */
+  font-family: 'Last Christmas', sans-serif;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid #ffcc00;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #ffcc00;
+  color: #4e0000; /* Dark red for contrast */
+}
+
+/* Add spacing to avoid content overlap */
+body {
+  padding-top: 4rem; /* Adjust to match the height of the nav */
+}
+
+
 /* Body Styling */
 body {
   font-family: 'Merriweather', serif;

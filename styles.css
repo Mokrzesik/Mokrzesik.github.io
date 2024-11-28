@@ -31,12 +31,10 @@
   top: 0; /* Aligns to the top */
   left: 50%; /* Centers it horizontally */
   transform: translateX(-50%); /* Adjusts for centering */
-  width: auto; /* Makes it the size of the buttons */
-  background: none; /* No extra background, it will inherit from the body */
-  box-shadow: none; /* No shadow, to match the body::before style */
+  width: 100%; /* Make it the size of the buttons */
+  height: auto;
+  background: var(--dark-bg); /* No extra background, it will inherit from the body */
   z-index: 10; /* Makes sure it stays above other content */
-  opacity: 0; /* Starts as invisible */
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
 }
 
 

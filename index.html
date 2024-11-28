@@ -16,7 +16,7 @@
   
   <header>
     <h1>Menu of Christmas Spirits</h1>
-    <h2>V1.5.5</h2>
+    <h2>V1.5.6</h2>
   </header>
   
   <main>
@@ -32,19 +32,19 @@
         <a href="#mixers" class="nav-button">Sodas & Mixers</a>
       </nav>
       <div class="drink">
+        <h3>Blackberry Gimlet</h3>
+        <p>ADD DESCIRPTION</p>
+      </div>
+      <div class="drink">
         <h3>Cranberry Margarita</h3>
         <p>ADD DESCIRPTION.</p>
       </div>
       <div class="drink">
-        <h3>Peppermint Old Fashioned</h3>
-        <p>ADD DESCIRPTION</p>
-      </div>
-      <div class="drink">
-        <h3>Spiced Brown Sugar Mule</h3>
-        <p>ADD DESCIRPTION</p>
-      </div>
-      <div class="drink">
         <h3>Gingerbread Daiquiri</h3>
+        <p>ADD DESCIRPTION</p>
+      </div>
+      <div class="drink">
+        <h3>Peppermint Old Fashioned</h3>
         <p>ADD DESCIRPTION</p>
       </div>
       <div class="drink">
@@ -52,7 +52,7 @@
         <p>ADD DESCIRPTION</p>
       </div>
       <div class="drink">
-        <h3>Blackberry Gimlet</h3>
+        <h3>Spiced Brown Sugar Mule</h3>
         <p>ADD DESCIRPTION</p>
       </div>
     </section>
@@ -162,21 +162,14 @@
 </html>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('scroll', function () {
   const nav = document.querySelector('.fixed-nav');
-  const specialtyHeader = document.querySelector('#specialty-drinks h2');
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (!entry.isIntersecting) {
-        nav.classList.add('sticky');
-      } else {
-        nav.classList.remove('sticky');
-      }
-    },
-    { rootMargin: '-50px 0px 0px 0px' } // Adjust to trigger just above the header
-  );
-
-  observer.observe(specialtyHeader);
+  
+  // Detect when the page is scrolled past a certain point
+  if (window.scrollY > 635) { // Adjust this value based on when the nav should stick
+    nav.classList.add('sticky'); // Stick the nav at the top
+  } else {
+    nav.classList.remove('sticky'); // Remove sticky effect when scrolled to top
+  }
 });
 </script>

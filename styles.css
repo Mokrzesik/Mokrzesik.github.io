@@ -220,3 +220,12 @@ footer {
     margin: 0 auto;
   }
 }
+
+/* Style for the dropdown content */
+.dropdown-content {
+  display: none; /* Hidden by default */
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 12px;
+}

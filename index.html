@@ -16,15 +16,8 @@
   
   <header>
     <h1>Menu of Christmas Spirits</h1>
-    <h2>V1.5.3</h2>
+    <h2>V1.5.4</h2>
   </header>
-
-  <nav class="fixed-nav">
-    <a href="#specialty-drinks" class="nav-button">Specialty Drinks</a>
-    <a href="#punches" class="nav-button">Punches</a>
-    <a href="#beers" class="nav-button">Beers</a>
-    <a href="#mixers" class="nav-button">Sodas & Mixers</a>
-  </nav>
   
   <main>
 
@@ -32,6 +25,12 @@
     <!-- Speciality Cocktails Section -->
     <section class="drink-category" id="specialty-drinks">
       <h2>Specialty Cocktails</h2>
+      <nav class="fixed-nav">
+        <a href="#specialty-drinks" class="nav-button">Specialty Cocktails</a>
+        <a href="#punches" class="nav-button">Punches</a>
+        <a href="#beers" class="nav-button">Beers</a>
+        <a href="#mixers" class="nav-button">Sodas & Mixers</a>
+      </nav>
       <div class="drink">
         <h3>Cranberry Margarita</h3>
         <p>ADD DESCIRPTION.</p>
@@ -161,3 +160,23 @@
   </footer>
 </body>
 </html>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('.fixed-nav');
+  const specialtyHeader = document.querySelector('#specialty-drinks h2');
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry.isIntersecting) {
+        nav.classList.add('sticky');
+      } else {
+        nav.classList.remove('sticky');
+      }
+    },
+    { rootMargin: '-50px 0px 0px 0px' } // Adjust to trigger just above the header
+  );
+
+  observer.observe(specialtyHeader);
+});
+</script>

@@ -37,6 +37,15 @@
   z-index: 10; /* Makes sure it stays above other content */
 }
 
+/* Add this to your CSS to style the placeholder */
+.nav-placeholder {
+  display: block;
+  height: 0; /* Starts with 0 height, adjusted via JS */
+}
+
+.specialty-drinks {
+  padding-top: 30px; /* This will add space inside the section */
+}
 
 
 /* Navigation Buttons */

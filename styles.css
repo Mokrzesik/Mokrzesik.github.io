@@ -51,6 +51,30 @@ body {
   padding-top: 4rem; /* Adjust to match the height of the nav */
 }
 
+/* Adjust Buttons for Mobile Devices */
+@media (max-width: 768px) {
+  .fixed-nav {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 0.5rem; /* Reduce space between buttons */
+    padding: 0.5rem;
+  }
+
+  .nav-button {
+    font-size: 1rem; /* Slightly smaller text */
+    padding: 0.4rem; /* Reduce padding for smaller buttons */
+    width: 90%; /* Make buttons fit within the screen */
+    margin: 0 auto; /* Center the buttons horizontally */
+  }
+}
+
+/* Fine-tune for very small screens */
+@media (max-width: 480px) {
+  .nav-button {
+    font-size: 0.9rem; /* Further reduce font size */
+    padding: 0.3rem; /* Compact padding */
+  }
+}
+
 
 /* Body Styling */
 body {

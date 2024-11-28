@@ -197,7 +197,7 @@ header h1 {
   color: #8b0000; /* drink titles */
   font-weight: bold;
   -webkit-text-stroke: 0.25px white; /* White border */
-  font-style: italic;
+  transform: skew(-20deg);
 }
 
 .drink p {

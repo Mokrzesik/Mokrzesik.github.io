@@ -16,7 +16,7 @@
   
   <header>
     <h1>Menu of Christmas Spirits</h1>
-    <h2>V1.5.11</h2>
+    <h2>V1.6.0</h2>
   </header>
   
   <main>
@@ -25,12 +25,6 @@
     <!-- Speciality Cocktails Section -->
     <section class="drink-category" id="specialty-drinks">
       <h2>Specialty Cocktails</h2>
-      <nav class="fixed-nav">
-        <a href="#specialty-drinks" class="nav-button">Specialty Cocktails</a>
-        <a href="#punches" class="nav-button">Punches</a>
-        <a href="#beers" class="nav-button">Beers</a>
-        <a href="#mixers" class="nav-button">Sodas & Mixers</a>
-      </nav>
       <div class="drink">
         <h3>Blackberry Gimlet</h3>
         <p>ADD DESCIRPTION</p>
@@ -160,38 +154,3 @@
   </footer>
 </body>
 </html>
-
-<script>
-window.addEventListener('scroll', function () {
-  const nav = document.querySelector('.fixed-nav');
-  const body = document.body; // Or use main if you prefer
-  const navHeight = nav.offsetHeight;
-  
-  // Placeholder element to fill the space
-  let placeholder = document.querySelector('.nav-placeholder');
-  
-  if (!placeholder) {
-    // Create the placeholder if it doesn't exist yet
-    placeholder = document.createElement('div');
-    placeholder.classList.add('nav-placeholder');
-    nav.parentNode.insertBefore(placeholder, nav.nextSibling); // Place it right after the nav
-  }
-  
-  // Set different scroll positions for mobile and desktop
-  let scrollThreshold = 615; // Default threshold for desktop
-
-  // Check if it's a mobile device (screen width < 768px)
-  if (window.innerWidth <= 768) {
-    scrollThreshold = 735; // Adjust this value to when the sticky effect should trigger on mobile
-  }
-
-  // Detect when the page is scrolled past the threshold
-  if (window.scrollY > scrollThreshold) {
-    nav.classList.add('sticky'); // Stick the nav at the top
-    placeholder.style.height = `${navHeight}px`; // Make the placeholder the same height as the nav
-  } else {
-    nav.classList.remove('sticky'); // Remove sticky effect when scrolled to top
-    placeholder.style.height = '0'; // Remove the placeholder height when the nav is not sticky
-  }
-});
-</script>

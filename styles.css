@@ -51,29 +51,30 @@ body {
   padding-top: 4rem; /* Adjust to match the height of the nav */
 }
 
-/* Adjust Buttons for Mobile Devices */
+/* Adjust Buttons for Mobile Devices - 2x2 Grid */
 @media (max-width: 768px) {
   .fixed-nav {
-    display: grid; /* Use grid layout */
-    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-    gap: 0.5rem; /* Add space between buttons */
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 0.5rem; /* Space between buttons */
     padding: 0.5rem;
   }
 
   .nav-button {
-    font-size: 1.2rem; /* Slightly larger text for readability */
-    text-align: center; /* Center the text */
-    padding: 0.5rem; /* Balanced padding */
+    font-size: 1.2rem; /* Larger text */
+    text-align: center; /* Center text */
+    padding: 0.7rem 0.5rem; /* Adjust padding for balance */
   }
 }
 
 /* Fine-tune for very small screens */
 @media (max-width: 480px) {
   .nav-button {
-    font-size: 1.1rem; /* Further reduce font size */
-    padding: 0.3rem; /* Compact padding */
+    font-size: 1.1rem; /* Slightly smaller font */
+    padding: 0.5rem; /* Compact padding */
   }
 }
+
 
 
 /* Body Styling */

@@ -16,7 +16,7 @@
   
   <header>
     <h1>Menu of Christmas Spirits</h1>
-    <h2>V1.5.6</h2>
+    <h2>V1.5.7</h2>
   </header>
   
   <main>
@@ -164,9 +164,17 @@
 <script>
 window.addEventListener('scroll', function () {
   const nav = document.querySelector('.fixed-nav');
-  
-  // Detect when the page is scrolled past a certain point
-  if (window.scrollY > 635) { // Adjust this value based on when the nav should stick
+
+  // Set different scroll positions for mobile and desktop
+  let scrollThreshold = 635; // Default threshold for desktop
+
+  // Check if it's a mobile device (screen width < 768px)
+  if (window.innerWidth <= 768) {
+    scrollThreshold = 665; // Adjust this value to when the sticky effect should trigger on mobile
+  }
+
+  // Detect when the page is scrolled past the threshold
+  if (window.scrollY > scrollThreshold) {
     nav.classList.add('sticky'); // Stick the nav at the top
   } else {
     nav.classList.remove('sticky'); // Remove sticky effect when scrolled to top

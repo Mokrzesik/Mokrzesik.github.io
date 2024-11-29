@@ -140,12 +140,8 @@ header h1 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .mixologists-title {
-    font-size: 1.4rem; /* Adjust title size for smaller screens */
-  }
-
-  .mixologists-names {
-    font-size: 1.4rem; /* Adjust names size for smaller screens */
+  .mixologists {
+    font-size: 1.0rem; /* Adjust title size for smaller screens */
   }
 }
 

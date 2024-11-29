@@ -256,7 +256,7 @@ footer {
 
 @media (max-width: 768px) {
   .triangle {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 }
 

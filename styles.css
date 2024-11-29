@@ -129,8 +129,8 @@ header h1 {
 
 /* Style for the Mixologists section */
 .mixologists {
+  font-family: 'Caviar Dreams';
   text-align: center; /* Center the text */
-  font-family: sans-serif; /* Use your custom font */
   margin-top: 1rem; /* Add space above */
   margin-bottom: 1rem; /* Add space below */
 }
@@ -164,7 +164,7 @@ header h1 {
 /* Styling for the introduction paragraph */
 .Introduction {
   font-size: 1.2rem;
-  font-family: 'Merriweather', serif;
+  font-family: 'Caviar Dreams';
   color: #f5f5dc;
   text-align: center;
   margin-top: 1.5rem;

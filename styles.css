@@ -134,13 +134,7 @@ header h1 {
   color: #ffcc00;
   margin-top: 1rem; /* Add space above */
   margin-bottom: 1rem; /* Add space below */
-  font-size: 1.2rem;
-}
-
-@media (max-width: 375px) {
-  .mixologists {
-    font-size: 1.2rem;
-  }
+  font-size: 1.0rem;
 }
 
 /* Style the "Mixologists" label */

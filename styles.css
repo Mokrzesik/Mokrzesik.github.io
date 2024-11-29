@@ -228,3 +228,34 @@ footer {
   margin-top: 0.5rem;
   border-radius: 12px;
 }
+
+.triangle, .triangle2 {
+  position: absolute;
+  top: 56.5%; /* Adjust this value to move the triangles lower */
+  transform: translateY(-50%); /* Keep the triangles centered vertically based on the new top */
+}
+
+.triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid rgba(102, 204, 102, 1); /* Replace with your desired color */
+  transform: rotate(90deg);
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.triangle2 {
+  display: none;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid rgba(102, 204, 102, 1); /* Replace with your desired color */
+  transform: rotate(180deg);
+  vertical-align: middle;
+  margin-left: 10px;
+}
+

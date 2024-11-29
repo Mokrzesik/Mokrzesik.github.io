@@ -23,13 +23,13 @@
     <p class="Introduction">
       Feel free to ask our expert mixologists for any custom cocktails — they'll craft something that you'll love!
     </p>
-    <h2>V1.6.11</h2>
+    <h2>V1.6.12</h2>
   </header>
   
   <main>
     <!-- Speciality Cocktails Section -->
     <section class="drink-category" id="specialty-drinks">
-      <h2>Specialty Cocktails</h2>
+      <h2>Specialty Cocktails<span class="triangle"></span><span class="triangle2"></span></h2>
       <div class="dropdown-content">
         <div class="drink">
           <h3>Blackberry Gimlet</h3>
@@ -62,7 +62,7 @@
 
     <!-- Punches Section -->
     <section class="drink-category" id="punches">
-      <h2>Punches<br>( Non - Alcoholic)</h2>
+      <h2>Punches<br>( Non - Alcoholic)<span class="dropdown-indicator">▼</span></h2>
       <div class="dropdown-content">
         <div class="drink">
           <h3>Brown Sugar & Cinnamon Apple Cider</h3>
@@ -80,7 +80,7 @@
     
     <!-- Beers Section -->
     <section class="drink-category" id="beers">
-      <h2>Beers</h2>
+      <h2>Beers<span class="dropdown-indicator">▼</span></h2>
       <div class="dropdown-content">
         <div class="drink">
           <h3>Miller Lite - Pilsner</h3>
@@ -129,7 +129,7 @@
     
     <!-- Mixers Section -->
     <section class="drink-category" id="mixers">
-      <h2>Sodas & Mixers</h2>
+      <h2>Sodas & Mixers<span class="dropdown-indicator">▼</span></h2>
       <div class="dropdown-content">
         <div class="drink">
           <h3>Coke</h3>
@@ -160,7 +160,7 @@
 
     <!-- Wine Section -->
     <section class="drink-category" id="wines">
-      <h2>Wines</h2>
+      <h2>Wines<span class="dropdown-indicator">▼</span></h2>
       <div class="dropdown-content">
         <div class="drink">
           <h3>Red and White available upon request</h3>
@@ -177,19 +177,25 @@
 </html>
 
 <script>
-  // Select all h2 tags
-  const headings = document.querySelectorAll('h2');
-  
-  headings.forEach(h2 => {
-    h2.addEventListener('click', () => {
-      // Toggle the visibility of the associated dropdown content
-      const dropdownContent = h2.nextElementSibling;
-      if (dropdownContent && dropdownContent.classList.contains('dropdown-content')) {
-        dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
-        
-        // Toggle active class for the h2 to change background color
-        h2.classList.toggle('active');
+// Select all h2 tags
+const headings = document.querySelectorAll('h2');
+
+headings.forEach(h2 => {
+  h2.addEventListener('click', () => {
+    // Toggle the visibility of the associated dropdown content
+    const dropdownContent = h2.nextElementSibling;
+    if (dropdownContent && dropdownContent.classList.contains('dropdown-content')) {
+      dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+      
+      // Find the parent section of the h2 and toggle the 'active' class
+      const section = h2.closest('.drink-category'); // Find the nearest section with the 'drink-category' class
+      if (section) {
+        section.classList.toggle('active');
+
       }
-    });
+    }
   });
+});
+
 </script>
+

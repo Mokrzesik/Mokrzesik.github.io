@@ -190,6 +190,10 @@ header h1 {
   padding-bottom: 0.5rem;
 }
 
+.NA {
+  font-size: 1.5rem;
+}
+
 /* Drink Items */
 .drink {
   background: rgba(255, 255, 255, 0.2);

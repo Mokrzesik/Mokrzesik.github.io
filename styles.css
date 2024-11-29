@@ -248,10 +248,10 @@ footer {
   border-right: 7px solid transparent;
   border-bottom: 20px solid rgba(102, 204, 102, 1); /* Replace with your desired color */
   transform: rotate(90deg);
-  vertical-align: middle;
   margin-left: 20px;
   transform-origin: 50% 66%;
   transition: ease 0.5s;
+  margin-bottom: 5px;
 }
 
 .drink-category.active .triangle {

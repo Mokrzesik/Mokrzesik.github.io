@@ -134,18 +134,16 @@ header h1 {
   color: #ffcc00;
   margin-top: 1rem; /* Add space above */
   margin-bottom: 1rem; /* Add space below */
+  font-size: 1.6rem;
 }
 
 /* Style the "Mixologists" label */
 .mixologists-title {
-  font-size: 2.2rem; /* Adjust size */
-  text-decoration: underline; /* Underline the title */
   font-weight: bold; /* Bold for emphasis */
 }
 
 /* Style the "AJ and Brandy" names */
 .mixologists-names {
-  font-size: 1.8rem; /* Slightly smaller for the names */
   font-weight: bold; /* Bold for the names */
 }
 

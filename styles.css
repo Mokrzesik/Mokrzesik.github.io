@@ -253,6 +253,12 @@ footer {
   transition: ease 0.5s;
 }
 
+@media (min-width: 768px) {
+  .triangle {
+    margin-top: 10px;
+  }
+}
+
 .drink-category.active .triangle {
   transform: rotate(180deg);
   transition: ease 0.5s;

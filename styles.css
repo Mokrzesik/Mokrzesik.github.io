@@ -135,32 +135,17 @@ header h1 {
   margin-top: 1rem; /* Add space above */
   margin-bottom: 1rem; /* Add space below */
   font-size: 1.6rem;
-}
-
-@media (max-width: 768px) {
-  .mixologists {
-    font-size: 1.5rem;
-  }
-}
-
-/* Style the "Mixologists" label */
-.mixologists-title {
-  font-weight: bold; /* Bold for emphasis */
-}
-
-/* Style the "AJ and Brandy" names */
-.mixologists-names {
-  font-weight: bold; /* Bold for the names */
+  font-weight: bold;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .mixologists-title {
-    font-size: 1.8rem; /* Adjust title size for smaller screens */
+    font-size: 1.4rem; /* Adjust title size for smaller screens */
   }
 
   .mixologists-names {
-    font-size: 1.5rem; /* Adjust names size for smaller screens */
+    font-size: 1.4rem; /* Adjust names size for smaller screens */
   }
 }
 

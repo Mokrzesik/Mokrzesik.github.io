@@ -251,12 +251,12 @@ footer {
   margin-left: 20px;
   transform-origin: 50% 66%;
   transition: ease 0.5s;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 768px) {
   .triangle {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 }
 

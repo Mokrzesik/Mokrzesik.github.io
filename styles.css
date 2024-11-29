@@ -13,6 +13,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Caviar Dreams';
+  src: url('fonts/CaviarDreams_Bold.woff') format('woff2'), /* Preferred format */
+       url('fonts/CaviarDreams_Bold.woff') format('woff'); /* Fallback format */
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Add spacing to avoid content overlap */
 body {
   padding-top: 4rem; /* Adjust to match the height of the nav */
@@ -193,10 +201,9 @@ header h1 {
 
 .drink h3 {
   font-size: 2.0rem;
-  font-family: 'Courier New', Courier, 'Lucida Console', monospace;
-  color: #8b0000; /* drink titles */
-  font-weight: bold;
-  -webkit-text-stroke: 0.25px white; /* White border */
+  font-family: 'Caviar Dreams';
+  color: #ff0000; /* drink titles */
+  /*-webkit-text-stroke: 0.25px white; /* White border */
 }
 
 .drink p {
@@ -233,12 +240,12 @@ footer {
   display: inline-block;
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
   border-bottom: 20px solid rgba(102, 204, 102, 1); /* Replace with your desired color */
   transform: rotate(90deg);
   vertical-align: middle;
-  margin-left: 10px;
+  margin-left: 20px;
   transform-origin: 50% 66%;
   transition: ease 0.5s;
 }

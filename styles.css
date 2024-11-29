@@ -192,7 +192,7 @@ header h1 {
 
 /* Drink Items */
 .drink {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 12px;
@@ -203,10 +203,10 @@ header h1 {
   font-size: 2.0rem;
   font-family: 'Caviar Dreams';
   color: #ff0000; /* drink titles */
-  /*-webkit-text-stroke: 0.25px white; /* White border */
 }
 
 .drink p {
+  font: 'Caviar Dreams';
   font-size: 1rem;
   color: #f5f5dc; /* descriptions */
 }

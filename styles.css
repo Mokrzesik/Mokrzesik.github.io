@@ -137,6 +137,12 @@ header h1 {
   font-size: 1.0rem;
 }
 
+@media (max-width: 768px) {
+  .mixologists {
+    font-size: 2.0rem;
+  }
+}
+
 /* Style the "Mixologists" label */
 .mixologists-title {
   font-weight: bold; /* Bold for emphasis */

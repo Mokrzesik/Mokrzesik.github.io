@@ -251,7 +251,7 @@ footer {
   margin-left: 20px;
   transform-origin: 50% 66%;
   transition: ease 0.5s;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .drink-category.active .triangle {

@@ -15,8 +15,8 @@
 
 @font-face {
   font-family: 'Caviar Dreams';
-  src: url('fonts/CaviarDreams_Bold.woff') format('woff2'), /* Preferred format */
-       url('fonts/CaviarDreams_Bold.woff') format('woff'); /* Fallback format */
+  src: url('fonts/CaviarDreams.woff') format('woff2'), /* Preferred format */
+       url('fonts/CaviarDreams.woff') format('woff'); /* Fallback format */
   font-weight: normal;
   font-style: normal;
 }
